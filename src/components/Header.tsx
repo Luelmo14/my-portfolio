@@ -1,10 +1,21 @@
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { useScrollspy } from "@/hooks/useScrollspy";
+import {
+  Home,
+  Briefcase,
+  GraduationCap,
+  Code,
+  FolderOpen,
+  User,
+  Mail,
+  Linkedin,
+} from "lucide-react";
 
 const Header = () => {
   const activeSection = useScrollspy(
     ["home", "experience", "education", "skills", "projects", "about"],
-    64,
+    64
   );
 
   const scrollToSection = (sectionId: string) => {
@@ -14,28 +25,50 @@ const Header = () => {
     }
   };
 
+  const navItems = [
+    { id: "home", icon: Home, label: "Home" },
+    { id: "experience", icon: Briefcase, label: "Experience" },
+    { id: "education", icon: GraduationCap, label: "Education" },
+    { id: "skills", icon: Code, label: "Skills" },
+    { id: "projects", icon: FolderOpen, label: "Projects" },
+    { id: "about", icon: User, label: "About" },
+  ];
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        <nav className="flex items-center space-x-4 lg:space-x-6">
-          {[
-            "home",
-            "experience",
-            "education",
-            "skills",
-            "projects",
-            "about",
-          ].map((section) => (
+    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-3xl px-4">
+      <Card className="p-2 flex items-center justify-between bg-background/80 backdrop-blur-sm">
+        <nav className="flex items-center space-x-1">
+          {navItems.map((item) => (
             <Button
-              key={section}
-              variant={activeSection === section ? "default" : "ghost"}
-              onClick={() => scrollToSection(section)}
+              key={item.id}
+              variant={activeSection === item.id ? "default" : "ghost"}
+              size="sm"
+              onClick={() => scrollToSection(item.id)}
+              className="flex items-center space-x-1"
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              <item.icon className="h-4 w-4" />
+              <span className="sr-only sm:not-sr-only">{item.label}</span>
             </Button>
           ))}
         </nav>
-      </div>
+        <div className="flex items-center space-x-1">
+          <Button variant="ghost" size="sm" asChild>
+            <a href="mailto:alexluelmo@gmail.com" aria-label="Email">
+              <Mail className="h-4 w-4" />
+            </a>
+          </Button>
+          <Button variant="ghost" size="sm" asChild>
+            <a
+              href="https://www.linkedin.com/in/alex-luelmo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+      </Card>
     </header>
   );
 };
