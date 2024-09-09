@@ -14,6 +14,7 @@ import {
   Award,
 } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const activeSection = useScrollspy(
@@ -56,7 +57,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-fit max-w-4xl px-4">
-      <Card className="p-2 flex items-center bg-background/80 backdrop-blur-sm">
+      <Card className="p-2 flex items-center bg-background/80 backdrop-blur-sm border-[#D8CAB7] dark:border-0 drop-shadow-md">
         <nav className="flex items-center space-x-1">
           {navItems.map((item, index) => (
             <Button
@@ -64,9 +65,12 @@ const Header = () => {
               variant={activeSection === item.id ? "default" : "ghost"}
               size="sm"
               onClick={() => scrollToSection(item.id)}
-              className={`flex items-center space-x-1 ${
-                index === 0 ? "" : "hidden sm:flex"
-              }`}
+              className={cn(
+                "flex items-center space-x-1",
+                index === 0 ? "" : "hidden sm:flex",
+                activeSection !== item.id &&
+                  "hover:bg-[#D8CAB7]/60 dark:hover:bg-[#2a2a2d]/90"
+              )}
             >
               <item.icon className="h-4 w-4" />
               <span className="sr-only lg:not-sr-only">{item.label}</span>
@@ -74,13 +78,26 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center">
-          <Separator orientation="vertical" className="h-6 mx-2" />
-          <Button variant="ghost" size="sm" asChild>
+          <Separator
+            orientation="vertical"
+            className="h-6 mx-2 bg-[#D8CAB7]/60 rounded"
+          />
+          <Button
+            variant="ghost"
+            size="sm"
+            className="hover:bg-[#D8CAB7]/60 dark:hover:bg-[#2a2a2d]/90"
+            asChild
+          >
             <a href="mailto:alexluelmo@gmail.com" aria-label="Email">
               <Mail className="h-4 w-4" />
             </a>
           </Button>
-          <Button variant="ghost" size="sm" asChild>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="hover:bg-[#D8CAB7]/60 dark:hover:bg-[#2a2a2d]/90"
+            asChild
+          >
             <a
               href="https://www.linkedin.com/in/alex-luelmo/"
               target="_blank"
@@ -90,7 +107,10 @@ const Header = () => {
               <Linkedin className="h-4 w-4" />
             </a>
           </Button>
-          <Separator orientation="vertical" className="h-6 mx-2" />
+          <Separator
+            orientation="vertical"
+            className="h-6 mx-2 bg-[#D8CAB7]/60 rounded"
+          />
           <ThemeToggle />
         </div>
       </Card>
