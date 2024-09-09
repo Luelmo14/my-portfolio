@@ -47,6 +47,8 @@ const Header = () => {
       if (screenWidth >= 2560) {
         offset = -120;
       }
+    } else {
+      offset = -50;
     }
 
     const topPosition =
