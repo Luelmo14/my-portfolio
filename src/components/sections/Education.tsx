@@ -24,7 +24,7 @@ const Education = () => {
 
   return (
     <section id="education" className="py-10">
-      <h2 className="text-3xl font-bold mb-6">Education</h2>
+      <h2 className="text-2xl font-bold mb-6">Education</h2>
       <div className="space-y-6">
         {educationList.map((edu, index) => (
           <Card key={index}>
