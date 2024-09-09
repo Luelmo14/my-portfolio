@@ -58,16 +58,18 @@ const Header = () => {
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-fit max-w-4xl px-4">
       <Card className="p-2 flex items-center bg-background/80 backdrop-blur-sm">
         <nav className="flex items-center space-x-1">
-          {navItems.map((item) => (
+          {navItems.map((item, index) => (
             <Button
               key={item.id}
               variant={activeSection === item.id ? "default" : "ghost"}
               size="sm"
               onClick={() => scrollToSection(item.id)}
-              className="flex items-center space-x-1"
+              className={`flex items-center space-x-1 ${
+                index === 0 ? "" : "hidden sm:flex"
+              }`}
             >
               <item.icon className="h-4 w-4" />
-              <span className="sr-only sm:not-sr-only">{item.label}</span>
+              <span className="sr-only lg:not-sr-only">{item.label}</span>
             </Button>
           ))}
         </nav>
