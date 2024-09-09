@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <section id="about" className="py-10 bg-muted">
+    <section id="about" className="py-10">
       <Card className="max-w-3xl mx-auto">
         <CardHeader>
           <CardTitle className="text-3xl font-bold">About Me</CardTitle>
