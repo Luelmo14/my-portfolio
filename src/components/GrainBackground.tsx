@@ -28,8 +28,12 @@ const GrainBackground: React.FC = () => {
         applyGrain(ctx, canvas.width, canvas.height, 30);
       } else {
         // Dark theme
-        ctx.fillStyle = "#09090B"; // Dark background color
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        Gradient(canvas, {
+          colors: ["#1e1e20", "#1e1e20"],
+          type: "linear",
+          angle: 50,
+        });
+        applyGrain(ctx, canvas.width, canvas.height, 5);
       }
     };
 
