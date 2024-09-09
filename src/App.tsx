@@ -8,7 +8,6 @@ import Projects from "./components/sections/Projects";
 import About from "./components/sections/About";
 import LicensesAndCertifications from "./components/sections/LicensesAndCertifications";
 import Footer from "./components/layout/Footer";
-import { Separator } from "@/components/ui/separator";
 
 function App() {
   return (
@@ -17,17 +16,11 @@ function App() {
         <Header />
         <main className="flex-grow container mx-auto px-4">
           <Home />
-          <Separator className="my-2 w-10/12 mx-auto" />
           <About />
-          <Separator className="my-2 w-10/12 mx-auto" />
           <Experience />
-          <Separator className="my-2 w-10/12 mx-auto" />
           <Education />
-          <Separator className="my-2 w-10/12 mx-auto" />
           <LicensesAndCertifications />
-          <Separator className="my-2 w-10/12 mx-auto" />
           <Skills />
-          <Separator className="my-2 w-10/12 mx-auto" />
           <Projects />
         </main>
         <Footer />
