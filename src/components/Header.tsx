@@ -28,11 +28,19 @@ const Header = () => {
     100
   );
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    // Add a margin when scrolling to the 'skills' section
+    const offset = id === "skills" ? -200 : 0;
+    const topPosition =
+      element.getBoundingClientRect().top + window.scrollY + offset;
+
+    window.scrollTo({
+      top: topPosition,
+      behavior: "smooth",
+    });
   };
 
   const navItems = [
@@ -46,7 +54,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-fit max-w-3xl px-4">
+    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-fit max-w-4xl px-4">
       <Card className="p-2 flex items-center bg-background/80 backdrop-blur-sm">
         <nav className="flex items-center space-x-1">
           {navItems.map((item) => (
