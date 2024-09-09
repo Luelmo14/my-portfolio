@@ -80,7 +80,7 @@ const Header = () => {
         <div className="flex items-center">
           <Separator
             orientation="vertical"
-            className="h-6 mx-2 bg-[#D8CAB7]/60 rounded"
+            className="h-6 mx-2 bg-[#D8CAB7]/60 dark:bg-zinc-700 rounded"
           />
           <Button
             variant="ghost"
@@ -109,7 +109,7 @@ const Header = () => {
           </Button>
           <Separator
             orientation="vertical"
-            className="h-6 mx-2 bg-[#D8CAB7]/60 rounded"
+            className="h-6 mx-2 bg-[#D8CAB7]/60 dark:bg-zinc-700 rounded"
           />
           <ThemeToggle />
         </div>
