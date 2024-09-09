@@ -13,6 +13,7 @@ import {
   Linkedin,
   Award,
 } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Header = () => {
   const activeSection = useScrollspy(
@@ -87,6 +88,8 @@ const Header = () => {
               <Linkedin className="h-4 w-4" />
             </a>
           </Button>
+          <Separator orientation="vertical" className="h-6 mx-2" />
+          <ThemeToggle />
         </div>
       </Card>
     </header>

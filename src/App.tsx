@@ -1,3 +1,4 @@
+import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/layout/Header";
 import Home from "./components/sections/Home";
 import Experience from "./components/sections/Experience";
@@ -10,19 +11,21 @@ import Footer from "./components/layout/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-grow">
-        <Home />
-        <About />
-        <Experience />
-        <Education />
-        <LicensesAndCertifications />
-        <Skills />
-        <Projects />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          <Home />
+          <About />
+          <Experience />
+          <Education />
+          <LicensesAndCertifications />
+          <Skills />
+          <Projects />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
