@@ -29,9 +29,15 @@ export function useScrollspy(ids: string[], offset: number = 0) {
 
       // Check if the user is near the bottom for the last section
       const nearBottom =
+        (documentHeight - scrollBottom) / documentHeight <= 0.01;
+      const nearlyNearBottom =
         (documentHeight - scrollBottom) / documentHeight <= 0.03;
+
       if (nearBottom) {
         setActiveId(ids[ids.length - 1]); // Set the last section as active
+        return;
+      } else if (nearlyNearBottom) {
+        setActiveId(ids[ids.length - 2]); // Set the second to last section as active
         return;
       }
 

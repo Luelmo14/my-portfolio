@@ -34,8 +34,21 @@ const Header = () => {
     const element = document.getElementById(id);
     if (!element) return;
 
-    // Add a margin when scrolling to the 'skills' section
-    const offset = id === "skills" ? -200 : 0;
+    let offset = 0;
+    const screenWidth = window.innerWidth;
+
+    if (id === "skills") {
+      if (screenWidth >= 2560) {
+        offset = -430; // Increased offset for 4K screens
+      } else {
+        offset = -200;
+      }
+    } else if (id === "certifications") {
+      if (screenWidth >= 2560) {
+        offset = -120;
+      }
+    }
+
     const topPosition =
       element.getBoundingClientRect().top + window.scrollY + offset;
 
