@@ -11,12 +11,21 @@ import {
   User,
   Mail,
   Linkedin,
+  Award,
 } from "lucide-react";
 
 const Header = () => {
   const activeSection = useScrollspy(
-    ["home", "experience", "education", "skills", "projects", "about"],
-    64
+    [
+      "home",
+      "about",
+      "experience",
+      "education",
+      "certifications",
+      "skills",
+      "projects",
+    ],
+    100
   );
 
   const scrollToSection = (sectionId: string) => {
@@ -28,11 +37,12 @@ const Header = () => {
 
   const navItems = [
     { id: "home", icon: Home, label: "Home" },
+    { id: "about", icon: User, label: "About" },
     { id: "experience", icon: Briefcase, label: "Experience" },
     { id: "education", icon: GraduationCap, label: "Education" },
+    { id: "certifications", icon: Award, label: "Certifications" },
     { id: "skills", icon: Code, label: "Skills" },
     { id: "projects", icon: FolderOpen, label: "Projects" },
-    { id: "about", icon: User, label: "About" },
   ];
 
   return (

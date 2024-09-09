@@ -5,6 +5,7 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import LicensesAndCertifications from "./components/LicensesAndCertifications";
 import Footer from "./components/Footer";
 
 function App() {
@@ -13,11 +14,12 @@ function App() {
       <Header />
       <main className="flex-grow">
         <Home />
+        <About />
         <Experience />
         <Education />
+        <LicensesAndCertifications />
         <Skills />
         <Projects />
-        <About />
       </main>
       <Footer />
     </div>
