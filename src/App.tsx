@@ -12,7 +12,7 @@ import Footer from "./components/layout/Footer";
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col font-geist">
         <Header />
         <main className="flex-grow container mx-auto px-4">
           <Home />
