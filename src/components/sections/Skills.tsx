@@ -13,21 +13,19 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-10 bg-muted">
-      <div className="container">
-        <h2 className="text-3xl font-bold mb-6">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {skills.map((skill, index) => (
-            <div key={index} className="space-y-2">
-              <div className="flex justify-between items-center">
-                <Badge variant="outline">{skill.name}</Badge>
-                <span className="text-sm text-muted-foreground">
-                  {skill.proficiency}%
-                </span>
-              </div>
-              <Progress value={skill.proficiency} className="w-full" />
+      <h2 className="text-3xl font-bold mb-6">Skills</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {skills.map((skill, index) => (
+          <div key={index} className="space-y-2">
+            <div className="flex justify-between items-center">
+              <Badge variant="outline">{skill.name}</Badge>
+              <span className="text-sm text-muted-foreground">
+                {skill.proficiency}%
+              </span>
             </div>
-          ))}
-        </div>
+            <Progress value={skill.proficiency} className="w-full" />
+          </div>
+        ))}
       </div>
     </section>
   );

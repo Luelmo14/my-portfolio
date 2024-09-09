@@ -24,25 +24,23 @@ const Experience = () => {
 
   return (
     <section id="experience" className="py-10">
-      <div className="container">
-        <h2 className="text-3xl font-bold mb-6">Experience</h2>
-        <div className="space-y-6">
-          {experiences.map((exp, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle>
-                  {exp.title} at {exp.company}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{exp.description}</p>
-              </CardContent>
-              <CardFooter className="text-sm text-muted-foreground">
-                {exp.dateRange}
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+      <h2 className="text-3xl font-bold mb-6">Experience</h2>
+      <div className="space-y-6">
+        {experiences.map((exp, index) => (
+          <Card key={index}>
+            <CardHeader>
+              <CardTitle>
+                {exp.title} at {exp.company}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>{exp.description}</p>
+            </CardContent>
+            <CardFooter className="text-sm text-muted-foreground">
+              {exp.dateRange}
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </section>
   );

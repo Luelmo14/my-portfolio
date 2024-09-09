@@ -37,40 +37,38 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-10">
-      <div className="container">
-        <h2 className="text-3xl font-bold mb-6">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>{project.description}</p>
-              </CardContent>
-              <CardFooter className="flex justify-between">
-                <Button variant="outline" asChild>
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </Button>
-                <Button asChild>
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Project
-                  </a>
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+      <h2 className="text-3xl font-bold mb-6">Projects</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <Card key={index}>
+            <CardHeader>
+              <CardTitle>{project.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>{project.description}</p>
+            </CardContent>
+            <CardFooter className="flex justify-between">
+              <Button variant="outline" asChild>
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </Button>
+              <Button asChild>
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </section>
   );
