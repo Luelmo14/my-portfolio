@@ -25,7 +25,7 @@ const GrainBackground: React.FC = () => {
           type: "linear",
           angle: 50,
         });
-        applyGrain(ctx, canvas.width, canvas.height, 25);
+        applyGrain(ctx, canvas.width, canvas.height, 30);
       } else {
         // Dark theme
         ctx.fillStyle = "#09090B"; // Dark background color
