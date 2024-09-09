@@ -8,10 +8,12 @@ import Projects from "./components/sections/Projects";
 import About from "./components/sections/About";
 import LicensesAndCertifications from "./components/sections/LicensesAndCertifications";
 import Footer from "./components/layout/Footer";
+import DynamicBackground from "./components/DynamicBackground";
 
 function App() {
   return (
     <ThemeProvider>
+      <DynamicBackground />
       <div className="min-h-screen flex flex-col font-geist">
         <Header />
         <main className="flex-grow container mx-auto px-4">
