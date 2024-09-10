@@ -29,9 +29,9 @@ const GrainBackground: React.FC = () => {
       } else {
         // Dark theme
         Gradient(canvas, {
-          colors: ["#26282a", "#26282a"],
+          colors: ["#1e2632", "#171D26", "#171926"],
           type: "linear",
-          angle: 50,
+          angle: 55,
         });
         applyGrain(ctx, canvas.width, canvas.height, 5);
       }
