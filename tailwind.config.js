@@ -12,11 +12,18 @@ module.exports = {
       center: "true",
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1000px",
       },
     },
     extend: {
+      fontFamily: {
+        geist: ["Geist", "sans-serif"],
+      },
       colors: {
+        borderLight: "#D8CAB7",
+        hoverBackgroundLight: "#D8CAB7",
+        backgroundPrimaryDark: "#26282a",
+        hoverBackgroundDark: "#2a2a2d",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

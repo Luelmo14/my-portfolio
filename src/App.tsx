@@ -1,26 +1,33 @@
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Footer from "./components/Footer";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import Header from "./components/layout/Header";
+import Home from "./components/sections/Home";
+import Experience from "./components/sections/Experience";
+import Education from "./components/sections/Education";
+import Skills from "./components/sections/Skills";
+import Projects from "./components/sections/Projects";
+import About from "./components/sections/About";
+import LicensesAndCertifications from "./components/sections/LicensesAndCertifications";
+import Footer from "./components/layout/Footer";
+import GrainBackground from "./components/GrainBackground";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-grow">
-        <Home />
-        <Experience />
-        <Education />
-        <Skills />
-        <Projects />
-        <About />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <GrainBackground />
+      <div className="min-h-screen flex flex-col font-geist">
+        <Header />
+        <main className="flex-grow container mx-auto px-4">
+          <Home />
+          <About />
+          <Experience />
+          <Education />
+          <LicensesAndCertifications />
+          <Skills />
+          <Projects />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
