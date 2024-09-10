@@ -29,7 +29,7 @@ const GrainBackground: React.FC = () => {
       } else {
         // Dark theme
         Gradient(canvas, {
-          colors: ["#1e1e20", "#1e1e20"],
+          colors: ["#26282a", "#26282a"],
           type: "linear",
           angle: 50,
         });
