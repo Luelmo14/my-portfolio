@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Gradient, applyGrain } from "@prodbyeagle/grainient";
 import { useTheme } from "@/contexts/ThemeContext";
-import colors from "@/styles/colors";
 
 const GrainBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -22,10 +21,7 @@ const GrainBackground: React.FC = () => {
       if (theme === "light") {
         // Light theme
         Gradient(canvas, {
-          colors: [
-            colors.backgroundPrimaryLight,
-            colors.backgroundSecondaryLight,
-          ],
+          colors: ["#F5E6D3", "#FAF3E8"],
           type: "linear",
           angle: 50,
         });
@@ -33,7 +29,7 @@ const GrainBackground: React.FC = () => {
       } else {
         // Dark theme
         Gradient(canvas, {
-          colors: [colors.backgroundPrimaryDark, colors.backgroundPrimaryDark],
+          colors: ["#26282a", "#26282a"],
           type: "linear",
           angle: 50,
         });

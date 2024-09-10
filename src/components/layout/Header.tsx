@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
-import colors from "@/styles/colors";
 
 const Header = () => {
   const activeSection = useScrollspy(
@@ -73,9 +72,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-fit max-w-4xl px-4">
-      <Card
-        className={`p-2 flex items-center bg-background/80 backdrop-blur-sm border-[${colors.borderLight}] dark:border-0 drop-shadow-md`}
-      >
+      <Card className="p-2 flex items-center bg-background/80 backdrop-blur-sm border-borderLight dark:border-0 drop-shadow-md">
         <nav className="flex items-center space-x-1">
           {navItems.map((item, index) => (
             <Button
@@ -87,7 +84,7 @@ const Header = () => {
                 "flex items-center space-x-1",
                 index === 0 ? "" : "hidden sm:flex",
                 activeSection !== item.id &&
-                  `hover:bg-[${colors.hoverBackgroundLight}]/60 dark:hover:bg-[${colors.hoverBackgroundDark}]/90`
+                  "hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark/90"
               )}
             >
               <item.icon className="h-4 w-4" />
@@ -98,12 +95,12 @@ const Header = () => {
         <div className="flex items-center">
           <Separator
             orientation="vertical"
-            className={`h-6 mx-2 bg-[${colors.borderLight}]/60 dark:bg-zinc-700 rounded`}
+            className="h-6 mx-2 bg-borderLight/60 dark:bg-zinc-700 rounded"
           />
           <Button
             variant="ghost"
             size="sm"
-            className={`hover:bg-[${colors.hoverBackgroundLight}]/60 dark:hover:bg-[${colors.hoverBackgroundDark}]/90`}
+            className="hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark/90"
             asChild
           >
             <a href="mailto:alexluelmo@gmail.com" aria-label="Email">
@@ -113,7 +110,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className={`hover:bg-[${colors.hoverBackgroundLight}]/60 dark:hover:bg-[${colors.hoverBackgroundDark}]/90`}
+            className="hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark/90"
             asChild
           >
             <a
@@ -127,7 +124,7 @@ const Header = () => {
           </Button>
           <Separator
             orientation="vertical"
-            className={`h-6 mx-2 bg-[${colors.borderLight}]/60 dark:bg-zinc-700 rounded`}
+            className="h-6 mx-2 bg-borderLight/60 dark:bg-zinc-700 rounded"
           />
           <ThemeToggle />
         </div>

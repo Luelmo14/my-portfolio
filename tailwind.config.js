@@ -20,6 +20,10 @@ module.exports = {
         geist: ["Geist", "sans-serif"],
       },
       colors: {
+        borderLight: "#D8CAB7",
+        hoverBackgroundLight: "#D8CAB7",
+        backgroundPrimaryDark: "#26282a",
+        hoverBackgroundDark: "#2a2a2d",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
