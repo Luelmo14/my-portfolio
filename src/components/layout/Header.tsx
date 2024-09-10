@@ -84,7 +84,7 @@ const Header = () => {
                 "flex items-center space-x-1",
                 index === 0 ? "" : "hidden sm:flex",
                 activeSection !== item.id &&
-                  "hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark/90"
+                  "hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark"
               )}
             >
               <item.icon className="h-4 w-4" />
@@ -100,7 +100,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark/90"
+            className="hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark"
             asChild
           >
             <a href="mailto:alexluelmo@gmail.com" aria-label="Email">
@@ -110,7 +110,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark/90"
+            className="hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark"
             asChild
           >
             <a
