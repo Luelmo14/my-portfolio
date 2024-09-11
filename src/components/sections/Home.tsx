@@ -68,9 +68,9 @@ const Home = () => {
             alt="Àlex Luelmo"
             className="w-64 lg:w-96 rounded-full z-10 relative"
           />
-          <div className="absolute top-[0px] right-[-20px] w-12 h-12 bg-orange-500/80 rounded-full z-0"></div>
-          <div className="absolute top-[125px] right-[350px] w-10 h-10 bg-fuchsia-600/80 rounded-full z-0"></div>
-          <div className="absolute top-[20px] left-[-20px] w-4 h-4 bg-black/70 rounded-full z-0"></div>
+          <div className="absolute top-[0px] right-[0px] w-11 h-11 bg-accentPrimary rounded-full z-0"></div>
+          <div className="absolute top-[160px] right-[345px] w-9 h-9 bg-accentSecondary rounded-full z-0"></div>
+          <div className="absolute top-[0px] left-[0px] w-4 h-4 bg-black/80 rounded-full z-0 dark:invert"></div>
         </div>
       </div>
     </section>
