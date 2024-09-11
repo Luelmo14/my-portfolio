@@ -58,7 +58,7 @@ const Home = () => {
             <span className="text-amber-500">Hey there,</span>
             <br /> It's Àlex Luelmo.
           </h1>
-          <p className="text-xl mb-6 text-gray-600">
+          <p className="text-xl mb-6 text-black/80 dark:text-white/80">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam...
           </p>
         </div>
