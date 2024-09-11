@@ -1,4 +1,4 @@
-import { Linkedin, Mail, FileText } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -13,19 +13,6 @@ const Home = () => {
         <div className="w-full lg:w-1/2 text-left relative z-10">
           <div className="flex mb-5">
             <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger className="mr-8" asChild>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-amber-500 transition-colors dark:text-white/70 dark:hover:text-amber-500"
-                  >
-                    <FileText size={24} />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>View Resume</p>
-                </TooltipContent>
-              </Tooltip>
               <Tooltip>
                 <TooltipTrigger className="mr-8" asChild>
                   <a
