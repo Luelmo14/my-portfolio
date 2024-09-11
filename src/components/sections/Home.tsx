@@ -17,7 +17,7 @@ const Home = () => {
                 <TooltipTrigger className="mr-8" asChild>
                   <a
                     href="#"
-                    className="text-gray-600 hover:text-amber-500 transition-colors"
+                    className="text-gray-600 hover:text-amber-500 transition-colors dark:text-white/70 dark:hover:text-amber-500"
                   >
                     <FileText size={24} />
                   </a>
@@ -26,12 +26,11 @@ const Home = () => {
                   <p>View Resume</p>
                 </TooltipContent>
               </Tooltip>
-
               <Tooltip>
                 <TooltipTrigger className="mr-8" asChild>
                   <a
                     href="#"
-                    className="text-gray-600 hover:text-amber-500 transition-colors"
+                    className="text-gray-600 hover:text-amber-500 transition-colors dark:text-white/70 dark:hover:text-amber-500"
                   >
                     <Mail size={24} />
                   </a>
@@ -40,12 +39,11 @@ const Home = () => {
                   <p>Send Email</p>
                 </TooltipContent>
               </Tooltip>
-
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a
                     href="#"
-                    className="text-gray-600 hover:text-amber-500 transition-colors"
+                    className="text-gray-600 hover:text-amber-500 transition-colors dark:text-white/70 dark:hover:text-amber-500"
                   >
                     <Linkedin size={24} />
                   </a>
