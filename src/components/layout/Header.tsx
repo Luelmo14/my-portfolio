@@ -21,8 +21,8 @@ const Header = () => {
     [
       "home",
       "about",
-      "experience",
       "education",
+      "experience",
       "certifications",
       "skills",
       "projects",
@@ -63,8 +63,8 @@ const Header = () => {
   const navItems = [
     { id: "home", icon: Home, label: "Home" },
     { id: "about", icon: User, label: "About" },
-    { id: "experience", icon: Briefcase, label: "Experience" },
     { id: "education", icon: GraduationCap, label: "Education" },
+    { id: "experience", icon: Briefcase, label: "Experience" },
     { id: "certifications", icon: Award, label: "Certifications" },
     { id: "skills", icon: Code, label: "Skills" },
     { id: "projects", icon: FolderOpen, label: "Projects" },

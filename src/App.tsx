@@ -19,8 +19,8 @@ function App() {
         <main className="flex-grow container mx-auto px-4">
           <Home />
           <About />
-          <Experience />
           <Education />
+          <Experience />
           <LicensesAndCertifications />
           <Skills />
           <Projects />
