@@ -26,6 +26,8 @@ module.exports = {
         hoverBackgroundDark: "#2B313A",
         accentPrimary: "#F59E0B",
         accentSecondary: "#C163BE",
+        opaqueTextDark: "#9197A0",
+        opaqueTextLight: "#636369",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
