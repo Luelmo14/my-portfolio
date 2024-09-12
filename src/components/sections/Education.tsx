@@ -55,7 +55,7 @@ const Education = () => {
                 rel="noopener noreferrer"
                 className="relative"
               >
-                <Avatar className="group h-[4.5rem] w-[4.5rem] mr-4 border-2 bg-background/80 dark:bg-slate-200 border-borderLight dark:border-borderDark relative">
+                <Avatar className="group h-[4.5rem] w-[4.5rem] mr-4 border-2 bg-background/80 dark:bg-slate-100 border-borderLight dark:border-borderDark relative">
                   <AvatarImage
                     src={edu.logo}
                     alt={`${edu.institution} logo`}
