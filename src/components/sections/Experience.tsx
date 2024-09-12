@@ -21,10 +21,10 @@ const Experience = () => {
       location: "Barcelona, España",
       dateRange: "2023 — 2024",
       description:
-        "- Desarrollo y mantenimiento de aplicaciones web.\n" +
-        "- Implementación de nuevas funcionalidades y optimización del código existente. Desarrollo back-end con Python.\n" +
-        "- Colaboración en el diseño y desarrollo de APIs REST.\n" +
-        "- Resolución de incidencias y soporte técnico.",
+        "Desarrollo y mantenimiento de aplicaciones web.\n" +
+        "Implementación de nuevas funcionalidades y optimización del código existente. Desarrollo back-end con Python.\n" +
+        "Colaboración en el diseño y desarrollo de APIs REST.\n" +
+        "Resolución de incidencias y soporte técnico.",
       logo: "src/assets/images/nexiona.webp",
       padding: "p-2",
       website: "https://nexiona.com/es/",
@@ -36,7 +36,7 @@ const Experience = () => {
       location: "Barcelona, España",
       dateRange: "2019 — 2020",
       description:
-        "- Verificación de las diferentes funcionalidades de los programas/softwares desarrollados por la empresa con el fin de completar su validación.",
+        "Verificación de las diferentes funcionalidades de los programas/softwares desarrollados por la empresa con el fin de completar su validación.",
       logo: "src/assets/images/fujitsu.webp",
       padding: "p-1",
       website: "https://global.fujitsu/es-es",
@@ -92,7 +92,7 @@ const Experience = () => {
                   </Avatar>
                 </a>
                 <div className="flex-grow">
-                  <h3 className="font-medium leading-[1.3] text-black/85 dark:text-slate-200 flex items-center">
+                  <h3 className="font-medium leading-[1.3] text-black/85 dark:text-slate-100 flex items-center">
                     <span>{exp.company}</span>
                     <ChevronRight
                       className={cn(
@@ -102,7 +102,7 @@ const Experience = () => {
                       )}
                     />
                   </h3>
-                  <div className="mt-[10px] leading-tight font-normal text-opaqueTextLight dark:text-opaqueTextDark">
+                  <div className="mt-[10px] leading-tight font-normal text-opaqueTextLight dark:text-opaqueTextDark/95">
                     <div className="flex items-center">
                       <BriefcaseBusiness
                         className="mr-[9px] -mt-[2px] h-[17px] w-[17px]"
@@ -130,7 +130,7 @@ const Experience = () => {
               <div
                 ref={(el) => (contentRefs.current[index] = el)}
                 className={cn(
-                  "mt-2 pl-[4.5rem] text-sm text-zinc-600 dark:text-slate-300",
+                  "mt-2 pl-[5.6rem] text-base text-opaqueTextLight dark:text-opaqueTextDark/95",
                   "transition-all duration-500 ease-in-out",
                   "overflow-hidden"
                 )}
