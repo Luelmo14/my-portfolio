@@ -19,8 +19,12 @@ module.exports = {
       fontFamily: {
         geist: ["Geist", "sans-serif"],
       },
+      boxShadow: {
+        custom: "0 0 7px 0 rgba(0, 0, 0, 0.15)",
+      },
       colors: {
         borderLight: "#D8CAB7",
+        borderDark: "#52525b",
         hoverBackgroundLight: "#D8CAB7",
         backgroundPrimaryDark: "#222831",
         hoverBackgroundDark: "#2B313A",
