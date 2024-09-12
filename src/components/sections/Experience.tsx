@@ -68,7 +68,7 @@ const Experience = () => {
             </header>
             <div className="z-10 sm:col-span-6">
               <div
-                className="flex items-center cursor-pointer group/accordion"
+                className="flex items-center cursor-pointer group/accordion hover:bg-zinc-100/0 dark:hover:bg-zinc-100/0"
                 onClick={() => toggleAccordion(index)}
               >
                 <a
@@ -96,9 +96,11 @@ const Experience = () => {
                     <span>{exp.company}</span>
                     <ChevronRight
                       className={cn(
-                        "ml-2 h-4 w-4 shrink-0 transition-transform duration-300",
-                        "opacity-0 group-hover/accordion:opacity-100",
-                        openIndex === index && "transform rotate-90"
+                        "ml-2 h-4 w-4 shrink-0 transition-all duration-300",
+                        "text-black/85 dark:text-slate-100",
+                        openIndex === index
+                          ? "opacity-100 transform rotate-90"
+                          : "opacity-0 group-hover/accordion:opacity-100"
                       )}
                     />
                   </h3>
