@@ -69,10 +69,10 @@ const Education = () => {
                 </Avatar>
               </a>
               <div>
-                <h3 className="font-medium leading-[1.3] text-black/85 dark:text-slate-200">
+                <h3 className="font-medium leading-[1.3] text-black/85 dark:text-slate-100">
                   <div>{edu.degree}</div>
                 </h3>
-                <div className="mt-[10px] leading-tight font-normal text-opaqueTextLight dark:text-opaqueTextDark">
+                <div className="mt-[10px] leading-tight font-normal text-opaqueTextLight dark:text-opaqueTextDark/95">
                   <div className="flex items-center">
                     <University
                       className="mr-[9px] -mt-[3px] h-[17px] w-[17px]"
