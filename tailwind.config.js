@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      rotate: {
+        17: "17deg",
+      },
       fontFamily: {
         geist: ["Geist", "sans-serif"],
       },
