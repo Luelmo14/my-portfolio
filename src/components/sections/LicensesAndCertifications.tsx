@@ -15,7 +15,7 @@ interface Certification {
   title: string;
   issuer: string;
   date: string;
-  credentialId: string;
+  credentialId?: string;
   credentialLink?: string;
   logo?: string;
   skillLogo?: string;
@@ -30,7 +30,8 @@ const certifications: Certification[] = [
     issuer: "freeCodeCamp",
     date: "Aug. 2024",
     credentialId: "fcc987a7545-306c-4828-875c-6b603a809ddb-dawp",
-    credentialLink: "#",
+    credentialLink:
+      "https://www.freecodecamp.org/certification/fcc987a7545-306c-4828-875c-6b603a809ddb/data-analysis-with-python-v7",
     logo: "src/assets/images/freeCodeCamp.webp",
     skillLogo: "src/assets/images/analysis.webp",
     translate: "translate-x-1.5 translate-y-1.5 -rotate-17",
@@ -42,7 +43,8 @@ const certifications: Certification[] = [
     issuer: "Google Actívate",
     date: "Jul. 2024",
     credentialId: "306312174",
-    credentialLink: "#",
+    credentialLink:
+      "https://skillshop.exceedlms.com/student/award/1bwb6pNByceD1ZBCxoqFWXmA",
     logo: "src/assets/images/google.webp",
     skillLogo: "src/assets/images/css.webp",
     translate: "translate-x-0 translate-y-3.5 -rotate-12",
@@ -53,7 +55,8 @@ const certifications: Certification[] = [
     issuer: "Google Actívate",
     date: "Jun. 2024",
     credentialId: "306303461",
-    credentialLink: "#",
+    credentialLink:
+      "https://skillshop.exceedlms.com/student/award/jiVh7R2mi5kuMarVmWCquauW",
     logo: "src/assets/images/google.webp",
     skillLogo: "src/assets/images/html.webp",
     translate: "translate-x-0 translate-y-3.5 -rotate-12",
@@ -64,7 +67,7 @@ const certifications: Certification[] = [
     issuer: "OpenEDG Python Institute",
     date: "Jun. 2024",
     credentialId: "k5M3.bwpf.J8Ys",
-    credentialLink: "#",
+    credentialLink: "https://verify.openedg.org/?id=k5M3.bwpf.J8Ys",
     logo: "src/assets/images/openEDG.webp",
     skillLogo: "src/assets/images/python.webp",
     translate: "translate-x-7 translate-y-[2.1rem] -rotate-17",
@@ -74,9 +77,10 @@ const certifications: Certification[] = [
     title: "First Certificate B2",
     issuer: "Escola d'Idiomes de Montgat",
     date: "Jan. 2017",
-    credentialId: "N/A",
-    credentialLink: "#",
     logo: "src/assets/images/first.webp",
+    skillLogo: "src/assets/images/cambridge.webp",
+    translate: "-translate-x-1 translate-y-6 -rotate-17",
+    size: "w-[100px]",
   },
 ];
 
@@ -89,7 +93,7 @@ const LicensesAndCertifications: React.FC = () => {
           <Card key={index} className="overflow-hidden">
             <CardHeader className="p-5 pt-4 pb-0">
               <CardTitle className="flex items-center justify-between">
-                <Avatar className="h-12 w-12 border-2 border-borderLight dark:border-borderDark aspect-square bg-white">
+                <Avatar className="h-12 w-12 border-2 border-borderLight dark:border-borderDark aspect-square">
                   {cert.logo ? (
                     <AvatarImage src={cert.logo} alt={cert.issuer} />
                   ) : (
@@ -108,19 +112,28 @@ const LicensesAndCertifications: React.FC = () => {
               <h3 className="text-lg font-semibold mb-3.5 leading-tight">
                 {cert.title}
               </h3>
-              <div
-                className={`flex items-center text-opaqueTextLight dark:text-opaqueTextDark/95 ${cert.padding}`}
-              >
-                <Signature className="h-[22px] w-[22px] mr-2" strokeWidth={2} />
-                <p className="font-medium leading-tight w-2/3">
-                  {cert.credentialId}
-                </p>
-              </div>
+              {cert.credentialId && (
+                <div
+                  className={`flex items-center text-opaqueTextLight dark:text-opaqueTextDark/95 ${cert.padding}`}
+                >
+                  <Signature
+                    className="h-[22px] w-[22px] mr-2"
+                    strokeWidth={2}
+                  />
+                  <p className="font-medium leading-tight w-2/3">
+                    {cert.credentialId}
+                  </p>
+                </div>
+              )}
             </CardContent>
             <CardFooter className="relative p-5 pt-0 pb-4">
-              <Button variant="default" className="w-full mr-[27%]">
-                Show credential
-              </Button>
+              {cert.credentialLink && (
+                <Button variant="default" className="w-full mr-[27%]" asChild>
+                  <a className="flex items-center" href={cert.credentialLink}>
+                    View credential
+                  </a>
+                </Button>
+              )}
               {cert.skillLogo && (
                 <div className={`absolute -bottom-1 -right-2 ${cert.size}`}>
                   <img
