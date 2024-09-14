@@ -129,7 +129,12 @@ const LicensesAndCertifications: React.FC = () => {
             <CardFooter className="relative p-5 pt-0 pb-4">
               {cert.credentialLink && (
                 <Button variant="default" className="w-full mr-[27%]" asChild>
-                  <a className="flex items-center" href={cert.credentialLink}>
+                  <a
+                    className="flex items-center"
+                    href={cert.credentialLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     View credential
                   </a>
                 </Button>
