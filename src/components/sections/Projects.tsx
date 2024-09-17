@@ -1,5 +1,11 @@
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 interface Project {
@@ -11,53 +17,75 @@ interface Project {
 }
 const projectsData: Project[] = [
   {
-    title: "Práctica de desarrollo Web",
+    title: "OpenEvents · Proyecto Vue.js",
     type: "Featured project",
     description:
-      "Creación de una página web desde cero (HTML y CSS), utilizando el framework de VUE.js, y comunicación con una API ya establecida.",
-    tags: ["Vue.js", "HTML", "CSS", "API"],
-    image: "/path/to/project-image-1.jpg",
+      "Desarrollo de una página web desde cero utilizando HTML, CSS y Vue.js. El proyecto incluía la implementación de diseño responsive, y integración con la API de OpenEvents. Funcionalidades clave: gestión de usuarios, eventos, y relaciones entre ellos. El desarrollo implicó organización del código en vistas y componentes, manejo de rutas, y realización de peticiones a la API.",
+    tags: ["Vue.js", "HTML", "CSS", "API", "Responsive Design"],
+    image: "src/assets/images/webProject.webp",
   },
   {
-    title: "Práctica de desarrollo de una API",
-    type: "Relevant practice",
-    description: "Creación de una API REST con funcionalidades CRUD.",
-    tags: ["API", "REST", "CRUD"],
+    title: "OpenEvents · API REST",
+    type: "Featured project",
+    description:
+      "Creación de una API REST basada en OpenEvents usando Node.js y JavaScript. Implementa gestión de eventos, usuarios, asistencias, mensajes y amistades. Incluye autenticación, encriptación de contraseñas y usa Planet Scale para base de datos MySQL en la nube. El proyecto abarcó desarrollo de rutas, DAOs y documentación completa.",
+    tags: ["Node.js", "JavaScript", "REST API", "MySQL", "Planet Scale"],
     image: "/path/to/project-image-2.jpg",
   },
   {
-    title: "Práctica de desarrollo de una aplicación Android",
+    title: "CornFlix · Aplicación Flutter",
     type: "Relevant practice",
     description:
-      "Creación de una aplicación de móvil Android con el lenguaje Java. La App tenía comunicación con una API.",
-    tags: ["Android", "Java", "API"],
-    image: "/path/to/project-image-3.jpg",
+      "Desarrollo de una aplicación móvil multiplataforma usando Flutter, que brinda información sobre películas. Integra geolocalización, autenticación con Firebase, y utiliza la API de TheMovieDB. Incluye funciones como búsqueda, favoritos, y recomendaciones basadas en ubicación y preferencias del usuario.",
+    tags: ["Flutter", "Firebase", "API", "Geolocation"],
+    image: "src/assets/images/cornflix.webp",
   },
   {
-    title: "Práctica de arquitectura y protocolos de Internet",
+    title: "Case Study CCNA3",
     type: "Relevant practice",
     description:
-      "Desarrollo de un Case Study que comprendía todos los conceptos de CCNA3 (ACLs, NAT, WAN, VPNs, etc.)",
-    tags: ["CCNA3", "Networking", "VPN"],
+      "Implementación de una red compleja utilizando Cisco Packet Tracer, abarcando conceptos de CCNA3. El proyecto incluyó configuración de routers y switches, implementación de HSRP, NAT, routing estático y dinámico, túneles GRE, DHCP, y ACLs. Se realizaron pruebas de conectividad y se documentó el proceso completo.",
+    tags: [
+      "CCNA3",
+      "Networking",
+      "Cisco Packet Tracer",
+      "Routing",
+      "Switching",
+      "Security",
+    ],
     image: "/path/to/project-image-4.jpg",
   },
   {
-    title: "Trabajo final de grado universitario",
-    type: "Relevant practice",
+    title:
+      "MenteCapaz - Portal web para gestión de alumnos con discapacidades mentales",
+    type: "Trabajo final de grado",
     description:
-      "Desarrollo de un portal web para la gestión de alumnos con discapacidades mentales. Creación de un portal web para gestionar alumnos con discapacidades mentales, usando React, Tailwind, MySQL, NodeJS, la API de Google Maps, entre otras tecnologías y herramientas, para mejorar su experiencia escolar.",
-    tags: ["React", "Tailwind", "MySQL", "NodeJS", "Google Maps API"],
+      "Desarrollo de un portal web para la gestión de alumnos con discapacidades mentales. Utiliza React, Tailwind CSS, MySQL y Express. Incluye funcionalidades como gestión de usuarios, centros y estudiantes, integración con Google Maps, y sistema de autenticación. El proyecto aborda la necesidad de mejorar la experiencia educativa de estudiantes con necesidades especiales.",
+    tags: [
+      "React.js",
+      "Tailwind CSS",
+      "MySQL",
+      "Express.js",
+      "Google Maps API",
+      "Firebase",
+    ],
     image: "/path/to/project-image-5.jpg",
   },
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
-  <div>
-    <div className="h-48 bg-red-400 rounded-xl mx-2 -mb-3"></div>
-    <Card className="overflow-hidden bg-[#F8F3EB] dark:bg-[#1F242E]">
+  <div className="relative">
+    <div className="h-48 mx-2 -mb-3 relative z-10">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="h-full w-full object-cover rounded-xl border border-borderLight dark:border-0 shadow-md dark:shadow-lg"
+      />
+    </div>
+    <Card className="overflow-hidden bg-[#F8F3EB] dark:bg-[#1F242E] relative z-20">
       <CardHeader className="space-y-0.5 py-4 px-5">
-        <CardTitle className="text-sm font-normal text-opaqueTextLight/90 dark:text-opaqueTextDark/80">
-          Featured project
+        <CardTitle className="text-sm font-medium text-opaqueTextLight/75 dark:text-opaqueTextDark/80 tracking-wider">
+          {project.type}
         </CardTitle>
         <CardTitle className="text-lg font-semibold mb-3.5 leading-tight">
           {project.title}
@@ -68,18 +96,20 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
           {project.description}
         </p>
       </CardContent>
+      <CardFooter className="px-5 pb-4">
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag, index) => (
+            <Badge
+              key={index}
+              variant="default"
+              className="hover:cursor-default hover:bg-primary/100"
+            >
+              {tag}
+            </Badge>
+          ))}
+        </div>
+      </CardFooter>
     </Card>
-    <div className="flex flex-wrap gap-2 mx-2 mt-3">
-      {project.tags.map((tag, index) => (
-        <Badge
-          key={index}
-          variant="default"
-          className="hover:cursor-default hover:bg-primary/100"
-        >
-          {tag}
-        </Badge>
-      ))}
-    </div>
   </div>
 );
 
