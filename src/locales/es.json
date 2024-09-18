@@ -8,9 +8,6 @@
     "skills": "Habilidades",
     "projects": "Proyectos"
   },
-  "languageSelector": {
-    "language": "Idioma"
-  },
   "home": {
     "emailTooltip": "Enviar correo electrónico",
     "linkedinTooltip": "Perfil de LinkedIn",
