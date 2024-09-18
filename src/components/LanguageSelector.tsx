@@ -5,7 +5,6 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
 } from "@/components/ui/select";
 
 const languages = [
@@ -23,13 +22,16 @@ export function LanguageSelector() {
 
   return (
     <Select onValueChange={handleLanguageChange} defaultValue={i18n.language}>
-      <SelectTrigger className="w-[130px]">
-        <Globe className="mr-2 h-4 w-4" />
-        <SelectValue placeholder="Language" />
+      <SelectTrigger className="border-0 shadow-none hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark">
+        <Globe className="h-4 w-4" strokeWidth={1.7} />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="border border-borderLight dark:border-0 bg-background dark:bg-backgroundPrimaryDark/95 mt-2 right-10">
         {languages.map((lang) => (
-          <SelectItem key={lang.code} value={lang.code}>
+          <SelectItem
+            key={lang.code}
+            value={lang.code}
+            className="cursor-pointer "
+          >
             {lang.name}
           </SelectItem>
         ))}
