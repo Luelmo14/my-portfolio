@@ -1,0 +1,19 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "certifications": "Certifications",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "languageSelector": {
+    "language": "Language"
+  },
+  "home": {
+    "greeting": "Hey there,",
+    "name": "It's Àlex Luelmo.",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam..."
+  }
+}

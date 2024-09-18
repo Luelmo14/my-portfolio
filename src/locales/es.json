@@ -1,0 +1,19 @@
+{
+  "header": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "education": "Educación",
+    "experience": "Experiencia",
+    "certifications": "Certificaciones",
+    "skills": "Habilidades",
+    "projects": "Proyectos"
+  },
+  "languageSelector": {
+    "language": "Idioma"
+  },
+  "home": {
+    "greeting": "Hola,",
+    "name": "Soy Àlex Luelmo.",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam..."
+  }
+}

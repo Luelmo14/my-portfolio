@@ -5,8 +5,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <section id="home" className="pt-32 pb-10 relative">
       <div className="flex flex-col-reverse lg:flex-row items-center">
@@ -42,8 +44,8 @@ const Home = () => {
             </TooltipProvider>
           </div>
           <h1 className="text-5xl lg:text-6xl font-black mb-6 !leading-normal tracking-tight">
-            <span className="text-amber-500">Hey there,</span>
-            <br /> It's Àlex Luelmo.
+            <span className="text-amber-500">{t("home.greeting")}</span>
+            <br /> {t("home.name")}
           </h1>
           <p className="text-xl mb-6 text-black/80 dark:text-white/80">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam...

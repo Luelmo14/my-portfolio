@@ -14,6 +14,7 @@ import {
   Award,
 } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
+import { LanguageSelector } from "@/components/LanguageSelector";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -52,7 +53,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-fit max-w-4xl px-4">
+    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-fit max-w-6xl px-4">
       <Card className="p-2 flex items-center bg-background/80 backdrop-blur-sm border-borderLight dark:border-0 drop-shadow-md">
         <nav className="flex items-center space-x-1">
           {navItems.map((item, index) => (
@@ -108,6 +109,11 @@ const Header = () => {
             className="h-6 mx-2 bg-borderLight/60 dark:bg-zinc-700 rounded"
           />
           <ThemeToggle />
+          <Separator
+            orientation="vertical"
+            className="h-6 mx-2 bg-borderLight/60 dark:bg-zinc-700 rounded"
+          />
+          <LanguageSelector />
         </div>
       </Card>
     </header>
