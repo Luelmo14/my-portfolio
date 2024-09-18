@@ -75,7 +75,7 @@ const projectsData: Project[] = [
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
   <div className="relative">
-    <div className="h-48 mx-2 -mb-3 relative z-10">
+    <div className="h-64 mx-2 -mb-3 relative z-10">
       <img
         src={project.image}
         alt={project.title}
@@ -117,7 +117,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-10">
       <h2 className="text-3xl font-bold mb-6">Projects</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
         {projectsData.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
