@@ -12,8 +12,10 @@
     "language": "Idioma"
   },
   "home": {
+    "emailTooltip": "Enviar correu electrònic",
+    "linkedinTooltip": "Perfil de LinkedIn",
     "greeting": "Hola,",
     "name": "Sóc l'Àlex Luelmo.",
-    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam..."
+    "intro": "Desenvolupador Full-Stack graduat de laSalle amb més d'un any d'experiència. Apassionat pel desenvolupament web, els serveis back-end i la creació de solucions innovadores. Buscant oportunitats per aplicar i desenvolupar les meves habilitats."
   }
 }

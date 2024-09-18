@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <section id="home" className="pt-32 pb-10 relative">
       <div className="flex flex-col-reverse lg:flex-row items-center">
-        <div className="w-full lg:w-1/2 text-left relative z-10">
+        <div className="w-full lg:w-[55%] text-left relative z-10">
           <div className="flex mb-5">
             <TooltipProvider>
               <Tooltip>
@@ -25,7 +25,7 @@ const Home = () => {
                   </a>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>Send Email</p>
+                  <p>{t("home.emailTooltip")}</p>
                 </TooltipContent>
               </Tooltip>
               <Tooltip>
@@ -38,7 +38,7 @@ const Home = () => {
                   </a>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>LinkedIn Profile</p>
+                  <p>{t("home.linkedinTooltip")}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -47,8 +47,8 @@ const Home = () => {
             <span className="text-amber-500">{t("home.greeting")}</span>
             <br /> {t("home.name")}
           </h1>
-          <p className="text-xl mb-6 text-black/80 dark:text-white/80">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam...
+          <p className="text-lg mb-6 text-black/80 dark:text-white/80">
+            {t("home.intro")}
           </p>
         </div>
         <div className="lg:ml-auto relative">

@@ -12,8 +12,10 @@
     "language": "Language"
   },
   "home": {
+    "emailTooltip": "Send Email",
+    "linkedinTooltip": "LinkedIn Profile",
     "greeting": "Hey there,",
     "name": "It's Àlex Luelmo.",
-    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam..."
+    "intro": "Full-Stack Developer graduated from LaSalle with over a year of experience. Passionate about web development, back-end services, and creating innovative solutions. Looking for opportunities to apply and develop my skills."
   }
 }
