@@ -24,6 +24,7 @@ const projectsData: Project[] = [
     tags: [
       "React.js",
       "Tailwind CSS",
+      "Responsive Design",
       "MySQL",
       "Express.js",
       "Google Maps API",
@@ -56,14 +57,6 @@ const projectsData: Project[] = [
     image: "src/assets/images/openEventsAPI.webp",
   },
   {
-    title: "Docker project / maybe",
-    type: "Trabajo final de ciclo",
-    description:
-      "Lorem ips ussum dolor sit amet, consectetur adipiscing elit. Ut euismod, nisl eget ultrices ultricies, orci erat tincidunt nisi, nec ultrices nisi nisl euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, nisl eget ultrices ultricies, orci erat tincidunt nisi, nec ultrices nisi nisl euismod.",
-    tags: ["Docker", "Kubernetes", "Docker Compose"],
-    image: "src/assets/images/docker.webp",
-  },
-  {
     title: "Case Study CCNA3",
     type: "Relevant practice",
     description:
@@ -77,6 +70,21 @@ const projectsData: Project[] = [
       "Security",
     ],
     image: "src/assets/images/ccna3.webp",
+  },
+  {
+    title: "Personal Portfolio Website",
+    type: "Featured project",
+    description:
+      "Developed a modern and responsive personal portfolio website using React, Vite, and shadcn/ui components. The site showcases my skills, projects, and professional experience with a clean and intuitive design. Features include dark mode support, smooth scrolling navigation, and custom animations for an engaging user experience.",
+    tags: [
+      "React.js",
+      "TypeScript",
+      "Vite",
+      "shadcn/ui",
+      "Tailwind CSS",
+      "Responsive Design",
+    ],
+    image: "src/assets/images/portfolio.webp",
   },
 ];
 
