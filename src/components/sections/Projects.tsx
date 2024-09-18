@@ -36,7 +36,7 @@ const projectsData: Project[] = [
     title: "CornFlix · Aplicación Flutter",
     type: "Relevant practice",
     description:
-      "Desarrollo de una aplicación móvil multiplataforma usando Flutter, que brinda información sobre películas. Integra geolocalización, autenticación con Firebase, y utiliza la API de TheMovieDB. Incluye funciones como búsqueda, favoritos, y recomendaciones basadas en ubicación y preferencias del usuario.",
+      "Desarrollo de una aplicación móvil multiplataforma llamada CornFlix usando Flutter, que brinda información detallada sobre películas. Integra geolocalización para recomendaciones personalizadas, autenticación de usuarios con Firebase, y utiliza la API de TheMovieDB para obtener datos actualizados. Incluye funciones como búsqueda avanzada, sistema de favoritos, recomendaciones basadas en ubicación y preferencias del usuario, visualización de trailers y clips, y más.",
     tags: ["Flutter", "Firebase", "API", "Geolocation"],
     image: "src/assets/images/cornflix.webp",
   },
