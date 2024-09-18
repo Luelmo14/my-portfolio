@@ -30,7 +30,7 @@ const projectsData: Project[] = [
     description:
       "Creación de una API REST basada en OpenEvents usando Node.js y JavaScript. Implementa gestión de eventos, usuarios, asistencias, mensajes y amistades. Incluye autenticación, encriptación de contraseñas y usa Planet Scale para base de datos MySQL en la nube. El proyecto abarcó desarrollo de rutas, DAOs y documentación completa.",
     tags: ["Node.js", "JavaScript", "REST API", "MySQL", "Planet Scale"],
-    image: "/path/to/project-image-2.jpg",
+    image: "src/assets/images/openEventsAPI.webp",
   },
   {
     title: "CornFlix · Aplicación Flutter",
@@ -53,7 +53,7 @@ const projectsData: Project[] = [
       "Switching",
       "Security",
     ],
-    image: "/path/to/project-image-4.jpg",
+    image: "src/assets/images/ccna3.webp",
   },
   {
     title:
@@ -69,7 +69,15 @@ const projectsData: Project[] = [
       "Google Maps API",
       "Firebase",
     ],
-    image: "/path/to/project-image-5.jpg",
+    image: "src/assets/images/mentecapaz.webp",
+  },
+  {
+    title: "Docker project / maybe",
+    type: "Trabajo final de ciclo",
+    description:
+      "Lorem ips ussum dolor sit amet, consectetur adipiscing elit. Ut euismod, nisl eget ultrices ultricies, orci erat tincidunt nisi, nec ultrices nisi nisl euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, nisl eget ultrices ultricies, orci erat tincidunt nisi, nec ultrices nisi nisl euismod.",
+    tags: ["Docker", "Kubernetes", "Docker Compose"],
+    image: "src/assets/images/docker.webp",
   },
 ];
 
