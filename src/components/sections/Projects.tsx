@@ -17,45 +17,6 @@ interface Project {
 }
 const projectsData: Project[] = [
   {
-    title: "OpenEvents · Proyecto Vue.js",
-    type: "Featured project",
-    description:
-      "Desarrollo de una página web desde cero utilizando HTML, CSS y Vue.js. El proyecto incluía la implementación de diseño responsive, y integración con la API de OpenEvents. Funcionalidades clave: gestión de usuarios, eventos, y relaciones entre ellos. El desarrollo implicó organización del código en vistas y componentes, manejo de rutas, y realización de peticiones a la API.",
-    tags: ["Vue.js", "HTML", "CSS", "API", "Responsive Design"],
-    image: "src/assets/images/webProject.webp",
-  },
-  {
-    title: "OpenEvents · API REST",
-    type: "Featured project",
-    description:
-      "Creación de una API REST basada en OpenEvents usando Node.js y JavaScript. Implementa gestión de eventos, usuarios, asistencias, mensajes y amistades. Incluye autenticación, encriptación de contraseñas y usa Planet Scale para base de datos MySQL en la nube. El proyecto abarcó desarrollo de rutas, DAOs y documentación completa.",
-    tags: ["Node.js", "JavaScript", "REST API", "MySQL", "Planet Scale"],
-    image: "src/assets/images/openEventsAPI.webp",
-  },
-  {
-    title: "CornFlix · Aplicación Flutter",
-    type: "Relevant practice",
-    description:
-      "Desarrollo de una aplicación móvil multiplataforma llamada CornFlix usando Flutter, que brinda información detallada sobre películas. Integra geolocalización para recomendaciones personalizadas, autenticación de usuarios con Firebase, y utiliza la API de TheMovieDB para obtener datos actualizados. Incluye funciones como búsqueda avanzada, sistema de favoritos, recomendaciones basadas en ubicación y preferencias del usuario, visualización de trailers y clips, y más.",
-    tags: ["Flutter", "Firebase", "API", "Geolocation"],
-    image: "src/assets/images/cornflix.webp",
-  },
-  {
-    title: "Case Study CCNA3",
-    type: "Relevant practice",
-    description:
-      "Implementación de una red compleja utilizando Cisco Packet Tracer, abarcando conceptos de CCNA3. El proyecto incluyó configuración de routers y switches, implementación de HSRP, NAT, routing estático y dinámico, túneles GRE, DHCP, y ACLs. Se realizaron pruebas de conectividad y se documentó el proceso completo.",
-    tags: [
-      "CCNA3",
-      "Networking",
-      "Cisco Packet Tracer",
-      "Routing",
-      "Switching",
-      "Security",
-    ],
-    image: "src/assets/images/ccna3.webp",
-  },
-  {
     title:
       "MenteCapaz - Portal web para gestión de alumnos con discapacidades mentales",
     type: "Trabajo final de grado",
@@ -72,12 +33,51 @@ const projectsData: Project[] = [
     image: "src/assets/images/mentecapaz.webp",
   },
   {
+    title: "CornFlix · Aplicación Flutter",
+    type: "Relevant practice",
+    description:
+      "Desarrollo de una aplicación móvil multiplataforma llamada CornFlix usando Flutter, que brinda información detallada sobre películas. Integra geolocalización para recomendaciones personalizadas, autenticación de usuarios con Firebase, y utiliza la API de TheMovieDB para obtener datos actualizados. Incluye funciones como búsqueda avanzada, sistema de favoritos, recomendaciones basadas en ubicación y preferencias del usuario, visualización de trailers y clips, y más.",
+    tags: ["Flutter", "Firebase", "API", "Geolocation"],
+    image: "src/assets/images/cornflix.webp",
+  },
+  {
+    title: "OpenEvents · Proyecto Vue.js",
+    type: "Featured project",
+    description:
+      "Desarrollo de una página web desde cero utilizando HTML, CSS y Vue.js. El proyecto incluía la implementación de diseño responsive, y integración con la API de OpenEvents. Funcionalidades clave: gestión de usuarios, eventos, y relaciones entre ellos. El desarrollo implicó organización del código en vistas y componentes, manejo de rutas, y realización de peticiones a la API.",
+    tags: ["Vue.js", "HTML", "CSS", "API", "Responsive Design"],
+    image: "src/assets/images/webProject.webp",
+  },
+  {
+    title: "OpenEvents · API REST",
+    type: "Featured project",
+    description:
+      "Creación de una API REST basada en OpenEvents usando Node.js y JavaScript. Implementa gestión de eventos, usuarios, asistencias, mensajes y amistades. Incluye autenticación, encriptación de contraseñas y usa Planet Scale para base de datos MySQL en la nube. El proyecto abarcó desarrollo de rutas, DAOs y documentación completa.",
+    tags: ["Node.js", "JavaScript", "REST API", "MySQL", "Planet Scale"],
+    image: "src/assets/images/openEventsAPI.webp",
+  },
+  {
     title: "Docker project / maybe",
     type: "Trabajo final de ciclo",
     description:
       "Lorem ips ussum dolor sit amet, consectetur adipiscing elit. Ut euismod, nisl eget ultrices ultricies, orci erat tincidunt nisi, nec ultrices nisi nisl euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod, nisl eget ultrices ultricies, orci erat tincidunt nisi, nec ultrices nisi nisl euismod.",
     tags: ["Docker", "Kubernetes", "Docker Compose"],
     image: "src/assets/images/docker.webp",
+  },
+  {
+    title: "Case Study CCNA3",
+    type: "Relevant practice",
+    description:
+      "Implementación de una red compleja utilizando Cisco Packet Tracer, abarcando conceptos de CCNA3. El proyecto incluyó configuración de routers y switches, implementación de HSRP, NAT, routing estático y dinámico, túneles GRE, DHCP, y ACLs. Se realizaron pruebas de conectividad y se documentó el proceso completo.",
+    tags: [
+      "CCNA3",
+      "Networking",
+      "Cisco Packet Tracer",
+      "Routing",
+      "Switching",
+      "Security",
+    ],
+    image: "src/assets/images/ccna3.webp",
   },
 ];
 
