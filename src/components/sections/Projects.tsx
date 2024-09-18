@@ -17,8 +17,7 @@ interface Project {
 }
 const projectsData: Project[] = [
   {
-    title:
-      "MenteCapaz - Portal web para gestión de alumnos con discapacidades mentales",
+    title: "MenteCapaz - Proyecto React.js",
     type: "Trabajo final de grado",
     description:
       "Desarrollo de un portal web para la gestión de alumnos con discapacidades mentales. Utiliza React, Tailwind CSS, MySQL y Express. Incluye funcionalidades como gestión de usuarios, centros y estudiantes, integración con Google Maps, y sistema de autenticación. El proyecto aborda la necesidad de mejorar la experiencia educativa de estudiantes con necesidades especiales.",
