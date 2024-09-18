@@ -17,47 +17,28 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
-  const activeSection = useScrollspy(
-    [
-      "home",
-      "about",
-      "education",
-      "experience",
-      "certifications",
-      "skills",
-      "projects",
-    ],
-    100
-  );
+  const activeSection = useScrollspy([
+    "home",
+    "about",
+    "education",
+    "experience",
+    "certifications",
+    "skills",
+    "projects",
+  ]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    if (!element) return;
+    if (element) {
+      const offset = -50;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY + offset;
 
-    let offset = 0;
-    const screenWidth = window.innerWidth;
-
-    if (id === "skills") {
-      if (screenWidth >= 2560) {
-        offset = -430; // Increased offset for 4K screens
-      } else {
-        offset = -200;
-      }
-    } else if (id === "certifications") {
-      if (screenWidth >= 2560) {
-        offset = -120;
-      }
-    } else {
-      offset = -50;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
-
-    const topPosition =
-      element.getBoundingClientRect().top + window.scrollY + offset;
-
-    window.scrollTo({
-      top: topPosition,
-      behavior: "smooth",
-    });
   };
 
   const navItems = [
