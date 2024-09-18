@@ -16,8 +16,10 @@ import {
 import ThemeToggle from "@/components/ThemeToggle";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { t } = useTranslation();
   const activeSection = useScrollspy([
     "home",
     "about",
@@ -43,13 +45,13 @@ const Header = () => {
   };
 
   const navItems = [
-    { id: "home", icon: Home, label: "Home" },
-    { id: "about", icon: User, label: "About" },
-    { id: "education", icon: GraduationCap, label: "Education" },
-    { id: "experience", icon: Briefcase, label: "Experience" },
-    { id: "certifications", icon: Award, label: "Certifications" },
-    { id: "skills", icon: Code, label: "Skills" },
-    { id: "projects", icon: FolderOpen, label: "Projects" },
+    { id: "home", icon: Home, label: t("header.home") },
+    { id: "about", icon: User, label: t("header.about") },
+    { id: "education", icon: GraduationCap, label: t("header.education") },
+    { id: "experience", icon: Briefcase, label: t("header.experience") },
+    { id: "certifications", icon: Award, label: t("header.certifications") },
+    { id: "skills", icon: Code, label: t("header.skills") },
+    { id: "projects", icon: FolderOpen, label: t("header.projects") },
   ];
 
   return (
@@ -70,7 +72,9 @@ const Header = () => {
               )}
             >
               <item.icon className="h-4 w-4" />
-              <span className="sr-only lg:not-sr-only">{item.label}</span>
+              <span className="sr-only lg:not-sr-only">
+                <p className="whitespace-nowrap">{item.label}</p>
+              </span>
             </Button>
           ))}
         </nav>
