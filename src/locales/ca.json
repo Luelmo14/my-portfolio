@@ -149,5 +149,8 @@
         ]
       }
     }
+  },
+  "footer": {
+    "title": "Desenvolupat & Dissenyat per Àlex Luelmo · 2024"
   }
 }
