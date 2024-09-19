@@ -7,86 +7,16 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 interface Project {
+  id: string;
   title: string;
   type: string;
   description: string;
   tags: string[];
   image: string;
 }
-const projectsData: Project[] = [
-  {
-    title: "MenteCapaz - Proyecto React.js",
-    type: "Trabajo final de grado",
-    description:
-      "Desarrollo de un portal web para la gestión de alumnos con discapacidades mentales. Utiliza React, Tailwind CSS, MySQL y Express. Incluye funcionalidades como gestión de usuarios, centros y estudiantes, integración con Google Maps, y sistema de autenticación. El proyecto aborda la necesidad de mejorar la experiencia educativa de estudiantes con necesidades especiales.",
-    tags: [
-      "React.js",
-      "Tailwind CSS",
-      "Responsive Design",
-      "MySQL",
-      "Express.js",
-      "Google Maps API",
-      "Firebase",
-    ],
-    image: "src/assets/images/mentecapaz.webp",
-  },
-  {
-    title: "CornFlix · Aplicación Flutter",
-    type: "Relevant practice",
-    description:
-      "Desarrollo de una aplicación móvil multiplataforma llamada CornFlix usando Flutter, que brinda información detallada sobre películas. Integra geolocalización para recomendaciones personalizadas, autenticación de usuarios con Firebase, y utiliza la API de TheMovieDB para obtener datos actualizados. Incluye funciones como búsqueda avanzada, sistema de favoritos, recomendaciones basadas en ubicación y preferencias del usuario, visualización de trailers y clips, y más.",
-    tags: ["Flutter", "Firebase", "API", "Geolocation"],
-    image: "src/assets/images/cornflix.webp",
-  },
-  {
-    title: "OpenEvents · Proyecto Vue.js",
-    type: "Featured project",
-    description:
-      "Desarrollo de una página web desde cero utilizando HTML, CSS y Vue.js. El proyecto incluía la implementación de diseño responsive, y integración con la API de OpenEvents. Funcionalidades clave: gestión de usuarios, eventos, y relaciones entre ellos. El desarrollo implicó organización del código en vistas y componentes, manejo de rutas, y realización de peticiones a la API.",
-    tags: ["Vue.js", "HTML", "CSS", "API", "Responsive Design"],
-    image: "src/assets/images/webProject.webp",
-  },
-  {
-    title: "OpenEvents · API REST",
-    type: "Featured project",
-    description:
-      "Creación de una API REST basada en OpenEvents usando Node.js y JavaScript. Implementa gestión de eventos, usuarios, asistencias, mensajes y amistades. Incluye autenticación, encriptación de contraseñas y usa Planet Scale para base de datos MySQL en la nube. El proyecto abarcó desarrollo de rutas, DAOs y documentación completa.",
-    tags: ["Node.js", "JavaScript", "REST API", "MySQL", "Planet Scale"],
-    image: "src/assets/images/openEventsAPI.webp",
-  },
-  {
-    title: "Case Study CCNA3",
-    type: "Relevant practice",
-    description:
-      "Implementación de una red compleja utilizando Cisco Packet Tracer, abarcando conceptos de CCNA3. El proyecto incluyó configuración de routers y switches, implementación de HSRP, NAT, routing estático y dinámico, túneles GRE, DHCP, y ACLs. Se realizaron pruebas de conectividad y se documentó el proceso completo.",
-    tags: [
-      "CCNA3",
-      "Networking",
-      "Cisco Packet Tracer",
-      "Routing",
-      "Switching",
-      "Security",
-    ],
-    image: "src/assets/images/ccna3.webp",
-  },
-  {
-    title: "Personal Portfolio Website",
-    type: "Featured project",
-    description:
-      "Developed a modern and responsive personal portfolio website using React, Vite, and shadcn/ui components. The site showcases my skills, projects, and professional experience with a clean and intuitive design. Features include dark mode support, smooth scrolling navigation, and custom animations for an engaging user experience.",
-    tags: [
-      "React.js",
-      "TypeScript",
-      "Vite",
-      "shadcn/ui",
-      "Tailwind CSS",
-      "Responsive Design",
-    ],
-    image: "src/assets/images/portfolio.webp",
-  },
-];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
   <div className="relative">
@@ -128,12 +58,48 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
   </div>
 );
 
-const Projects = () => {
+const Projects: React.FC = () => {
+  const { t } = useTranslation();
+  const projectsData = [
+    {
+      id: "mentecapaz",
+      image: "src/assets/images/mentecapaz.webp",
+    },
+    {
+      id: "cornflix",
+      image: "src/assets/images/cornflix.webp",
+    },
+    {
+      id: "openeventsAPI",
+      image: "src/assets/images/openEventsAPI.webp",
+    },
+    {
+      id: "openeventsVue",
+      image: "src/assets/images/webProject.webp",
+    },
+    {
+      id: "ccna",
+      image: "src/assets/images/ccna3.webp",
+    },
+    {
+      id: "portfolio",
+      image: "src/assets/images/portfolio.webp",
+    },
+  ];
+
+  const projectList = projectsData.map((item) => ({
+    ...item,
+    ...(t(`projects.projectsData.${item.id}`, { returnObjects: true }) as Omit<
+      Project,
+      keyof typeof item
+    >),
+  }));
+
   return (
     <section id="projects" className="py-10">
-      <h2 className="text-3xl font-bold mb-6">Projects</h2>
+      <h2 className="text-3xl font-bold mb-6">{t("projects.title")}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
-        {projectsData.map((project, index) => (
+        {projectList.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
       </div>

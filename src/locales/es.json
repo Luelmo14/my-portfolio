@@ -1,0 +1,153 @@
+{
+  "header": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "education": "Formación",
+    "experience": "Experiencia",
+    "certifications": "Certificaciones",
+    "skills": "Habilidades",
+    "projects": "Proyectos"
+  },
+  "home": {
+    "emailTooltip": "Enviar correo electrónico",
+    "linkedinTooltip": "Perfil de LinkedIn",
+    "greeting": "Hola,",
+    "name": "Soy Àlex Luelmo.",
+    "intro": "Desarrollador full-stack graduado de LaSalle con más de un año de experiencia. Apasionado por el desarrollo web, los servicios back-end y la creación de soluciones innovadoras. Buscando oportunidades para aplicar y desarrollar mis habilidades."
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraph1": "Como graduado en Técnicas de Aplicaciones de Software por la Universidad LaSalle Ramon Llull, he construido una sólida base en el desarrollo full-stack. Con más de un año en Nexiona Connectocrats, he perfeccionado mis habilidades en servicios back-end de Python, además del desarrollo de aplicaciones web. Mi experiencia abarca el desarrollo de soluciones back-end robustas y API RESTful, así como la creación de interfaces de usuario intuitivas y diseños",
+    "paragraph2": "Mi objetivo profesional es sobresalir en el desarrollo web, el desarrollo full-stack o la administración de bases de datos. Me motiva aplicar mis conocimientos para resolver desafíos técnicos y siempre busco oportunidades de crecimiento. Con una sólida formación académica y experiencia práctica, incluyendo mi etapa en Fujitsu Technology Solutions, estoy comprometido a brindar soluciones de software eficientes e innovadoras."
+  },
+  "education": {
+    "title": "Formación Académica",
+    "degrees": {
+      "lasalle": {
+        "degree": "Grado Universitario en Técnicas de Aplicaciones de Software",
+        "institution": "LaSalle Universidad Ramon Llull",
+        "location": "Barcelona, España"
+      },
+      "stucom": {
+        "degree": "Grado Superior de Administración de Sistemas Informáticos en Red",
+        "institution": "Stucom Centro de Estudios",
+        "location": "Barcelona, España"
+      },
+      "thalassa": {
+        "degree": "Bachillerato Tecnológico",
+        "institution": "Instituto Thalassa",
+        "location": "Montgat, España"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiencia profesional",
+    "experiences": {
+      "nexiona": {
+        "position": "Desarrollador de Software Full-Stack",
+        "info": "Empresa especializada en soluciones IoT.",
+        "location": "Barcelona, España",
+        "description": "Desarrollo y mantenimiento de aplicaciones web. Desarrollo back-end con Python. Implementación de nuevas funcionalidades y optimización del código existente. Colaboración en el diseño y desarrollo de APIs REST. Resolución de incidencias y soporte técnico."
+      },
+      "fujitsu": {
+        "position": "Técnico, Validación de Software (Prácticas)",
+        "info": "Compañía global japonesa en el sector de las TIC.",
+        "location": "Barcelona, España",
+        "description": "Verificación de las diferentes funcionalidades de los programas/softwares desarrollados por la empresa con el fin de completar su validación."
+      }
+    }
+  },
+  "certifications": {
+    "title": "Licencias y certificaciones",
+    "dateTitle": "Fecha de emisión: ",
+    "credentialButton": "Ver credencial",
+    "certificates": {
+      "dataAnalysis": {
+        "title": "Data Analysis with Python",
+        "date": "agosto de 2024"
+      },
+      "google1": {
+        "title": "Curso de introducción al desarrollo web: HTML y CSS (2/2)",
+        "date": "julio de 2024"
+      },
+      "google2": {
+        "title": "Curso de introducción al desarrollo web: HTML y CSS (1/2)",
+        "date": "junio de 2024"
+      },
+      "pcep": {
+        "title": "PCEP – Certified Entry-Level Python Programmer",
+        "date": "junio de 2024"
+      },
+      "b2": {
+        "title": "First Certificate B2",
+        "date": "enero de 2017"
+      }
+    }
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "projectsData": {
+      "mentecapaz": {
+        "title": "MenteCapaz · Proyecto React.js",
+        "type": "Trabajo final de grado universitario",
+        "description": "Desarrollo de un portal web para la gestión de alumnos con discapacidades mentales. Utiliza React.js, Tailwind CSS, MySQL y Express.js. Incluye funcionalidades como gestión de usuarios, centros y estudiantes, integración con Google Maps, y sistema de autenticación. El proyecto aborda la necesidad de mejorar la experiencia educativa de estudiantes con necesidades especiales.",
+        "tags": [
+          "React.js",
+          "Tailwind CSS",
+          "Diseño Responsive",
+          "MySQL",
+          "Express.js",
+          "Google Maps API",
+          "Firebase"
+        ]
+      },
+      "cornflix": {
+        "title": "CornFlix · Aplicación Flutter",
+        "type": "Proyecto destacado",
+        "description": "Desarrollo de una aplicación móvil multiplataforma llamada CornFlix usando Flutter, que brinda información detallada sobre películas. Integra geolocalización para recomendaciones personalizadas, autenticación de usuarios con Firebase, y utiliza la API de TheMovieDB para obtener datos actualizados. Incluye funciones como búsqueda avanzada, sistema de favoritos, recomendaciones basadas en ubicación y preferencias del usuario, visualización de trailers, clips, y más.",
+        "tags": ["Flutter", "Firebase", "API", "Geolocalización"]
+      },
+      "openeventsAPI": {
+        "title": "OpenEvents · API REST",
+        "type": "Práctica relevante",
+        "description": "Creación de una API REST basada en OpenEvents usando Node.js y JavaScript. Implementa gestión de eventos, usuarios, asistencias, mensajes y amistades. Incluye autenticación, encriptación de contraseñas y usa Planet Scale para base de datos MySQL en la nube. El proyecto abarcó desarrollo de rutas, DAOs y documentación completa.",
+        "tags": ["Node.js", "JavaScript", "REST API", "MySQL", "Planet Scale"]
+      },
+      "openeventsVue": {
+        "title": "OpenEvents · Proyecto Vue.js",
+        "type": "Proyecto destacado",
+        "description": "Desarrollo de una página web desde cero utilizando HTML, CSS y Vue.js. El proyecto incluía la implementación de diseño responsive, y integración con la API de OpenEvents. Funcionalidades clave: gestión de usuarios, eventos, y relaciones entre ellos. El desarrollo implicó organización del código en vistas y componentes, manejo de rutas, y realización de peticiones a la API.",
+        "tags": ["Vue.js", "HTML", "CSS", "API", "Diseño Responsive"]
+      },
+      "ccna": {
+        "title": "Case Study CCNA3",
+        "type": "Práctica relevante",
+        "description": "Implementación de una red compleja utilizando Cisco Packet Tracer, abarcando conceptos de CCNA3. El proyecto incluyó configuración de routers y switches, implementación de HSRP, NAT, routing estático y dinámico, túneles GRE, DHCP, y ACLs. Se realizaron pruebas de conectividad y se documentó el proceso completo.",
+        "tags": [
+          "CCNA3",
+          "Redes",
+          "Cisco Packet Tracer",
+          "Enrutamiento",
+          "Switching",
+          "Seguridad"
+        ]
+      },
+      "portfolio": {
+        "title": "Portafolio personal · Proyecto React.js",
+        "type": "Proyecto destacado",
+        "description": "Desarrollo de un sitio web como portafolio personal, moderno y responsive, utilizando React.js, TypeScript, Vite y componentes de shadcn/ui. El sitio muestra mi formación, experiencia profesional, habilidades, certificaciones y proyectos, con un diseño limpio e intuitivo.",
+        "tags": [
+          "React.js",
+          "TypeScript",
+          "Vite",
+          "shadcn/ui",
+          "Tailwind CSS",
+          "Diseño Responsive"
+        ]
+      }
+    }
+  }
+}

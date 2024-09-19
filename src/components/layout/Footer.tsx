@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="py-6">
       <div className="container">

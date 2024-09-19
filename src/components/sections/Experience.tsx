@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import {
   ChevronRight,
   MapPin,
@@ -8,54 +8,60 @@ import {
 } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
-const Experience = () => {
+interface ExperienceItem {
+  id: string;
+  position: string;
+  info: string;
+  location: string;
+  description: string;
+  logo: string;
+  padding: string;
+  website: string;
+}
+
+const Experience: React.FC = () => {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const experiences = [
+  const experienceData = [
     {
+      id: "nexiona",
       company: "Nexiona Connectocrats, S.L.",
-      position: "DESARROLLADOR DE SOFTWARE FULL-STACK",
-      info: "Empresa especializada en soluciones IoT.",
-      location: "Barcelona, España",
       dateRange: "2023 — 2024",
-      description:
-        "Desarrollo y mantenimiento de aplicaciones web.\n" +
-        "Implementación de nuevas funcionalidades y optimización del código existente. Desarrollo back-end con Python.\n" +
-        "Colaboración en el diseño y desarrollo de APIs REST.\n" +
-        "Resolución de incidencias y soporte técnico.",
       logo: "src/assets/images/nexiona.webp",
       padding: "p-2",
       website: "https://nexiona.com/es/",
     },
     {
+      id: "fujitsu",
       company: "Fujitsu Technology Solutions, SA",
-      position: "DEPARTAMENTO TÉCNICO, VALIDACIÓN DE SOFTWARE (Becario)",
-      info: "Compañía global japonesa en el sector de las TIC.",
-      location: "Barcelona, España",
       dateRange: "2019 — 2020",
-      description:
-        "Verificación de las diferentes funcionalidades de los programas/softwares desarrollados por la empresa con el fin de completar su validación.",
       logo: "src/assets/images/fujitsu.webp",
       padding: "p-1",
       website: "https://global.fujitsu/es-es",
     },
   ];
 
+  const experienceList = experienceData.map((item) => ({
+    ...item,
+    ...(t(`experience.experiences.${item.id}`, { returnObjects: true }) as Omit<
+      ExperienceItem,
+      keyof typeof item
+    >),
+  }));
+
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  useEffect(() => {
-    contentRefs.current = contentRefs.current.slice(0, experiences.length);
-  }, [experiences]);
-
   return (
     <section id="experience" className="py-10">
-      <h2 className="text-2xl font-bold mb-6">Experience</h2>
+      <h2 className="text-2xl font-bold mb-6">{t("experience.title")}</h2>
       <div className="space-y-8">
-        {experiences.map((exp, index) => (
+        {experienceList.map((exp, index) => (
           <div
             key={index}
             className="relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4"

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Card,
   CardContent,
@@ -10,6 +9,7 @@ import {
 import { Signature } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 interface Certification {
   title: string;
@@ -24,72 +24,76 @@ interface Certification {
   padding?: string;
 }
 
-const certifications: Certification[] = [
-  {
-    title: "Data Analysis with Python",
-    issuer: "freeCodeCamp",
-    date: "Aug. 2024",
-    credentialId: "fcc987a7545-306c-4828-875c-6b603a809ddb-dawp",
-    credentialLink:
-      "https://www.freecodecamp.org/certification/fcc987a7545-306c-4828-875c-6b603a809ddb/data-analysis-with-python-v7",
-    logo: "src/assets/images/freeCodeCamp.webp",
-    skillLogo: "src/assets/images/analysis.webp",
-    translate: "translate-x-1.5 translate-y-1.5 -rotate-17",
-    size: "w-32 h-32",
-    padding: "py-[2px]",
-  },
-  {
-    title: "Curso de introducción al desarrollo web: HTML y CSS (2/2)",
-    issuer: "Google Actívate",
-    date: "Jul. 2024",
-    credentialId: "306312174",
-    credentialLink:
-      "https://skillshop.exceedlms.com/student/award/1bwb6pNByceD1ZBCxoqFWXmA",
-    logo: "src/assets/images/google.webp",
-    skillLogo: "src/assets/images/css.webp",
-    translate: "translate-x-0 translate-y-3.5 -rotate-12",
-    size: "w-[120px]",
-  },
-  {
-    title: "Curso de introducción al desarrollo web: HTML y CSS (1/2)",
-    issuer: "Google Actívate",
-    date: "Jun. 2024",
-    credentialId: "306303461",
-    credentialLink:
-      "https://skillshop.exceedlms.com/student/award/jiVh7R2mi5kuMarVmWCquauW",
-    logo: "src/assets/images/google.webp",
-    skillLogo: "src/assets/images/html.webp",
-    translate: "translate-x-0 translate-y-3.5 -rotate-12",
-    size: "w-[120px]",
-  },
-  {
-    title: "PCEP – Certified Entry-Level Python Programmer",
-    issuer: "OpenEDG Python Institute",
-    date: "Jun. 2024",
-    credentialId: "k5M3.bwpf.J8Ys",
-    credentialLink: "https://verify.openedg.org/?id=k5M3.bwpf.J8Ys",
-    logo: "src/assets/images/openEDG.webp",
-    skillLogo: "src/assets/images/python.webp",
-    translate: "translate-x-7 translate-y-[2.1rem] -rotate-17",
-    size: "w-40 h-40",
-  },
-  {
-    title: "First Certificate B2",
-    issuer: "Escola d'Idiomes de Montgat",
-    date: "Jan. 2017",
-    logo: "src/assets/images/first.webp",
-    skillLogo: "src/assets/images/cambridge.webp",
-    translate: "-translate-x-1 translate-y-6 -rotate-17",
-    size: "w-[100px]",
-  },
-];
-
 const LicensesAndCertifications: React.FC = () => {
+  const { t } = useTranslation();
+
+  const certificationData = [
+    {
+      id: "dataAnalysis",
+      issuer: "freeCodeCamp",
+      credentialId: "fcc987a7545-306c-4828-875c-6b603a809ddb-dawp",
+      credentialLink:
+        "https://www.freecodecamp.org/certification/fcc987a7545-306c-4828-875c-6b603a809ddb/data-analysis-with-python-v7",
+      logo: "src/assets/images/freeCodeCamp.webp",
+      skillLogo: "src/assets/images/analysis.webp",
+      translate: "translate-x-1.5 translate-y-1.5 -rotate-17",
+      size: "w-32 h-32",
+      padding: "py-[2px]",
+    },
+    {
+      id: "google1",
+      issuer: "Google Actívate",
+      credentialId: "306312174",
+      credentialLink:
+        "https://skillshop.exceedlms.com/student/award/1bwb6pNByceD1ZBCxoqFWXmA",
+      logo: "src/assets/images/google.webp",
+      skillLogo: "src/assets/images/css.webp",
+      translate: "translate-x-0 translate-y-3.5 -rotate-12",
+      size: "w-[120px]",
+    },
+    {
+      id: "google2",
+      issuer: "Google Actívate",
+      credentialId: "306303461",
+      credentialLink:
+        "https://skillshop.exceedlms.com/student/award/jiVh7R2mi5kuMarVmWCquauW",
+      logo: "src/assets/images/google.webp",
+      skillLogo: "src/assets/images/html.webp",
+      translate: "translate-x-0 translate-y-3.5 -rotate-12",
+      size: "w-[120px]",
+    },
+    {
+      id: "pcep",
+      issuer: "OpenEDG Python Institute",
+      credentialId: "k5M3.bwpf.J8Ys",
+      credentialLink: "https://verify.openedg.org/?id=k5M3.bwpf.J8Ys",
+      logo: "src/assets/images/openEDG.webp",
+      skillLogo: "src/assets/images/python.webp",
+      translate: "translate-x-7 translate-y-[2.1rem] -rotate-17",
+      size: "w-40 h-40",
+    },
+    {
+      id: "b2",
+      issuer: "Escola d'Idiomes de Montgat",
+      logo: "src/assets/images/first.webp",
+      skillLogo: "src/assets/images/cambridge.webp",
+      translate: "-translate-x-1 translate-y-6 -rotate-17",
+      size: "w-[100px]",
+    },
+  ];
+
+  const certificationList = certificationData.map((item) => ({
+    ...item,
+    ...(t(`certifications.certificates.${item.id}`, {
+      returnObjects: true,
+    }) as Omit<Certification, keyof typeof item>),
+  }));
+
   return (
     <section id="certifications" className="py-10">
-      <h2 className="text-2xl font-bold mb-6">Licenses and Certifications</h2>
+      <h2 className="text-2xl font-bold mb-6">{t("certifications.title")}</h2>
       <div className="grid gap-6 lg:grid-cols-2">
-        {certifications.map((cert, index) => (
+        {certificationList.map((cert, index) => (
           <Card key={index} className="overflow-hidden">
             <CardHeader className="p-5 pt-4 pb-0">
               <CardTitle className="flex items-center justify-between">
@@ -101,7 +105,8 @@ const LicensesAndCertifications: React.FC = () => {
                   )}
                 </Avatar>
                 <p className="text-base font-normal text-opaqueTextLight dark:text-opaqueTextDark/95">
-                  Date of issue: {cert.date}
+                  {t("certifications.dateTitle")}{" "}
+                  {t(`certifications.certificates.${cert.id}.date`)}
                 </p>
               </CardTitle>
               <CardDescription className="text-base font-normal text-opaqueTextLight dark:text-opaqueTextDark/95 pt-4">
@@ -135,7 +140,7 @@ const LicensesAndCertifications: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View credential
+                    {t("certifications.credentialButton")}
                   </a>
                 </Button>
               )}

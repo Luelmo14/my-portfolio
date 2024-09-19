@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
-const Skills = () => {
+const Skills: React.FC = () => {
+  const { t } = useTranslation();
   const skills = [
     { name: "HTML" },
     { name: "CSS" },
@@ -22,7 +24,7 @@ const Skills = () => {
   ];
   return (
     <section id="skills" className="py-10">
-      <h2 className="text-2xl font-bold mb-6">Skills</h2>
+      <h2 className="text-2xl font-bold mb-6">{t("skills.title")}</h2>
       <div className="flex flex-wrap gap-4">
         {skills.map((skill, index) => (
           <Badge
