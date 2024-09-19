@@ -2,7 +2,7 @@
   "header": {
     "home": "Inici",
     "about": "Sobre mi",
-    "education": "Educació",
+    "education": "Formació",
     "experience": "Experiència",
     "certifications": "Certificacions",
     "skills": "Habilitats",
@@ -37,6 +37,23 @@
         "degree": "Batxillerat Tecnològic",
         "institution": "Institut Thalassa",
         "location": "Montgat, Espanya"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiència professional",
+    "experiences": {
+      "nexiona": {
+        "position": "Desenvolupador de Software Full-Stack",
+        "info": "Empresa especialitzada en solucions IoT.",
+        "location": "Barcelona, Espanya",
+        "description": "Desenvolupament i manteniment d'aplicacions web. Desenvolupament back-end amb Python. Implementació de noves funcionalitats i optimització del codi existent. Col·laboració en el disseny i desenvolupament de APIs REST. Resolució d'incidències i suport tècnic."
+      },
+      "fujitsu": {
+        "position": "Tècnic, Validació de Software (Practiques)",
+        "info": "Empresa japonesa en el sector de TIC.",
+        "location": "Barcelona, Espanya",
+        "description": "Verificació de les diferents funcionalitats dels programes/programari desenvolupats per la empresa per completar la seva validació."
       }
     }
   }
