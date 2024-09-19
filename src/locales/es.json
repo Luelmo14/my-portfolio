@@ -14,5 +14,10 @@
     "greeting": "Hola,",
     "name": "Soy Àlex Luelmo.",
     "intro": "Desarrollador Full-Stack graduado de LaSalle con más de un año de experiencia. Apasionado por el desarrollo web, los servicios back-end y la creación de soluciones innovadoras. Buscando oportunidades para aplicar y desarrollar mis habilidades."
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraph1": "Como graduado en Técnicas de Aplicaciones de Software por la Universidad LaSalle Ramon Llull, he construido una sólida base en el desarrollo full-stack. Con más de un año en Nexiona Connectocrats, he perfeccionado mis habilidades en servicios back-end de Python, además del desarrollo de aplicaciones web. Mi experiencia abarca el desarrollo de soluciones back-end robustas y API RESTful, así como la creación de interfaces de usuario intuitivas y diseños",
+    "paragraph2": "Mi objetivo profesional es sobresalir en el desarrollo web, el desarrollo full-stack o la administración de bases de datos. Me motiva aplicar mis conocimientos para resolver desafíos técnicos y siempre busco oportunidades de crecimiento. Con una sólida formación académica y experiencia práctica, incluyendo mi etapa en Fujitsu Technology Solutions, estoy comprometido a brindar soluciones de software eficientes e innovadoras."
   }
 }

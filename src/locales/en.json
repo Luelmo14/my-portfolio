@@ -14,5 +14,10 @@
     "greeting": "Hey there,",
     "name": "It's Àlex Luelmo.",
     "intro": "Full-Stack Developer graduated from LaSalle with over a year of experience. Passionate about web development, back-end services, and creating innovative solutions. Looking for opportunities to apply and develop my skills."
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "As a Software Application Techniques graduate from LaSalle Universitat Ramon Llull, I've built a strong foundation in full-stack development. With over a year at Nexiona Connectocrats, I've honed my skills in back-end Python services, in addition to web application development. My expertise spans developing robust back-end solutions and RESTful APIs, as well as creating intuitive user interfaces and responsive designs.",
+    "paragraph2": "My career goal is to excel in web development, full-stack engineering, or database administration. I'm driven to apply my knowledge to solve technical challenges, always seeking growth opportunities. With a solid educational background and practical experience, including exposure at Fujitsu Technology Solutions, I'm committed to delivering efficient and innovative software solutions."
   }
 }

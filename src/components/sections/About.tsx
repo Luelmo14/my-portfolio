@@ -1,26 +1,28 @@
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
+
 const About = () => {
+  const { t } = useTranslation();
+  const paragraph1 = t("about.paragraph1");
+
+  const isCatalanOrSpanish = i18n.language === "ca" || i18n.language === "es";
+
   return (
     <section id="about" className="py-10">
-      <h2 className="text-2xl font-semibold mb-2">About Me</h2>
-      <div>
-        <p className="space-y-4 font-normal opacity-95">
-          G Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.{" "}
+      <h2 className="text-2xl font-semibold mb-2">{t("about.title")}</h2>
+      <div className="opacity-90">
+        <p className="space-y-4">
+          {isCatalanOrSpanish ? (
+            <>
+              {paragraph1.split(" responsive")[0]}
+              <em> responsive</em>
+              {paragraph1.split(" responsive")[1]}
+            </>
+          ) : (
+            paragraph1
+          )}
         </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.{" "}
-        </p>
+        <p>{t("about.paragraph2")}</p>
       </div>
     </section>
   );
