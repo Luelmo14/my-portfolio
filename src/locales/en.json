@@ -86,5 +86,68 @@
   },
   "skills": {
     "title": "Skills"
+  },
+  "projects": {
+    "title": "Projects",
+    "projectsData": {
+      "mentecapaz": {
+        "title": "MenteCapaz · React.js project",
+        "type": "Final degree project",
+        "description": "Development of a web portal for the management of students with mental disabilities. It uses React.js, Tailwind CSS, MySQL and Express.js. It includes functionalities such as user, center and student management, integration with Google Maps API, and authentication system. The project addresses the need to improve the educational experience of students with special needs.",
+        "tags": [
+          "React.js",
+          "Tailwind CSS",
+          "Responsive Design",
+          "MySQL",
+          "Express.js",
+          "Google Maps API",
+          "Firebase"
+        ]
+      },
+      "cornflix": {
+        "title": "CornFlix · Flutter app",
+        "type": "Featured project",
+        "description": "Developed a cross-platform mobile app called CornFlix using Flutter, which provides detailed information about movies. It integrates geolocation for personalized recommendations, user authentication with Firebase, and uses TheMovieDB API to get up-to-date data. It includes features like advanced search, favorites system, recommendations based on location and user preferences, viewing trailers and clips, and more.",
+        "tags": ["Flutter", "Firebase", "API", "Geolocation"]
+      },
+      "openeventsAPI": {
+        "title": "OpenEvents · API REST",
+        "type": "Relevant practice",
+        "description": "Building an OpenEvents-based REST API using Node.js and JavaScript. It implements event, user, attendance, messaging, and friendship management. It includes authentication, password encryption, and uses Planet Scale for MySQL cloud database. The project included development of routes, DAOs, and full documentation.",
+        "tags": ["Node.js", "JavaScript", "REST API", "MySQL", "Planet Scale"]
+      },
+      "openeventsVue": {
+        "title": "OpenEvents · Vue.js project",
+        "type": "Featured project",
+        "description": "Development of a website from scratch using HTML, CSS and Vue.js. The project included the implementation of responsive design, and integration with the OpenEvents API. Key functionalities: management of users, events, and relationships between them. The development involved organizing the code into views and components, handling routes, and making requests to the API.",
+        "tags": ["Vue.js", "HTML", "CSS", "API", "Responsive Design"]
+      },
+      "ccna": {
+        "title": "Case Study CCNA3",
+        "type": "Relevant practice",
+        "description": "Implementation of a complex network using Cisco Packet Tracer, covering CCNA3 concepts. The project included configuration of routers and switches, implementation of HSRP, NAT, static and dynamic routing, GRE tunnels, DHCP, and ACLs. Connectivity testing was performed and the entire process was documented.",
+        "tags": [
+          "CCNA3",
+          "Networking",
+          "Cisco Packet Tracer",
+          "Routing",
+          "Switching",
+          "Security"
+        ]
+      },
+      "portfolio": {
+        "title": "Personal portfolio · React.js project",
+        "type": "Featured project",
+        "description": "Development of a modern and responsive personal portfolio website using React.js, TypeScript, Vite and shadcn/ui components. The site showcases my education, professional experience, skills, certifications and projects, with a clean and intuitive design.",
+        "tags": [
+          "React.js",
+          "TypeScript",
+          "Vite",
+          "shadcn/ui",
+          "Tailwind CSS",
+          "Responsive Design"
+        ]
+      }
+    }
   }
 }

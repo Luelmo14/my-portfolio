@@ -86,5 +86,68 @@
   },
   "skills": {
     "title": "Habilitats"
+  },
+  "projects": {
+    "title": "Projectes",
+    "projectsData": {
+      "mentecapaz": {
+        "title": "MenteCapaz · Projecte React.js",
+        "type": "Treball final de grau universitari",
+        "description": "Desenvolupament d'un portal web per gestionar alumnes amb discapacitats mentals. Utilitza React.js, Tailwind CSS, MySQL i Express.js. Inclou funcionalitats com la gestió d'usuaris, centres i estudiants, integració amb Google Maps i sistema d'autenticació. El projecte aborda la necessitat de millorar l'experiència educativa d'estudiants amb necessitats especials.",
+        "tags": [
+          "React.js",
+          "Tailwind CSS",
+          "Disseny Responsive",
+          "MySQL",
+          "Express.js",
+          "Google Maps API",
+          "Firebase"
+        ]
+      },
+      "cornflix": {
+        "title": "CornFlix · Aplicació Flutter",
+        "type": "Projecte destacat",
+        "description": "Desenvolupament d'una aplicació mòbil multiplataforma anomenada CornFlix usant Flutter, que brinda informació detallada sobre pel·lícules. Integra geolocalització per a recomanacions personalitzades, autenticació d'usuaris amb Firebase, i utilitza l'API de TheMovieDB per obtenir dades actualitzades. Inclou funcions com cerca avançada, sistema de favorits, recomanacions basades en ubicació i preferències de l'usuari, visualització de tràilers, clips, i més.",
+        "tags": ["Flutter", "Firebase", "API", "Geolocalització"]
+      },
+      "openeventsAPI": {
+        "title": "OpenEvents · API REST",
+        "type": "Pràctica rellevant",
+        "description": "Creació d'una API REST basada en OpenEvents usant Node.js i JavaScript. Implementa la gestió d'esdeveniments, usuaris, assistències, missatges i amistats. Inclou autenticació, encriptació de contrasenyes i utilitza Planet Scale per a base de dades MySQL al núvol. El projecte va abastar desenvolupament de rutes, DAOs i documentació completa.",
+        "tags": ["Node.js", "JavaScript", "REST API", "MySQL", "Planet Scale"]
+      },
+      "openeventsVue": {
+        "title": "OpenEvents · Projecte Vue.js",
+        "type": "Projecte destacat",
+        "description": "Desenvolupament duna pàgina web des de zero utilitzant HTML, CSS i Vue.js. El projecte incloïa la implementació de disseny responsive i integració amb l'API d'OpenEvents. Funcionalitats clau: gestió d'usuaris, esdeveniments i relacions entre ells. El desenvolupament va implicar organització del codi en vistes i components, maneig de rutes i realització de peticions a l'API.",
+        "tags": ["Vue.js", "HTML", "CSS", "API", "Disseny Responsive"]
+      },
+      "ccna": {
+        "title": "Case Study CCNA3",
+        "type": "Pràctica rellevant",
+        "description": "Implementació d'una xarxa complexa utilitzant Cisco Packet Tracer, tot abastant conceptes de CCNA3. El projecte va incloure configuració de routers i switches, implementació de HSRP, NAT, routing estàtic i dinàmic, túnels GRE, DHCP, i ACLs. Es van fer proves de connectivitat i es va documentar el procés complet.",
+        "tags": [
+          "CCNA3",
+          "Xarxes",
+          "Cisco Packet Tracer",
+          "Enrutament",
+          "Switching",
+          "Seguretat"
+        ]
+      },
+      "portfolio": {
+        "title": "Portafolis personal · Projecte React.js",
+        "type": "Projecte destacat",
+        "description": "Desenvolupament d'un lloc web com a portafolis personal, modern i responsive, utilitzant React.js, TypeScript, Vite i components de shadcn/ui. El lloc mostra la meva formació, experiència professional, habilitats, certificacions i projectes, amb un disseny net i intuïtiu.",
+        "tags": [
+          "React.js",
+          "TypeScript",
+          "Vite",
+          "shadcn/ui",
+          "Tailwind CSS",
+          "Disseny Responsive"
+        ]
+      }
+    }
   }
 }
