@@ -1,35 +1,54 @@
-import { Button } from "@/components/ui/button";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { Linkedin, Mail } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
-    <footer className="py-6">
+    <footer className="py-10">
       <div className="container">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-center md:text-left mb-4 md:mb-0">
-            <p>&copy; 2024 [Alex Luelmo]. All rights reserved.</p>
+        <div className="flex flex-col items-center">
+          <div className="flex space-x-6 mb-4">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="https://www.linkedin.com/in/alex-luelmo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-amber-500 transition-colors dark:text-white/70 dark:hover:text-amber-500"
+                  >
+                    <Linkedin size={22} strokeWidth={1.8} />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent className="-translate-x-3.5">
+                  <p>{t("home.linkedinTooltip")}</p>
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="mailto:alexluelmo@gmail.com"
+                    className="text-gray-600 hover:text-amber-500 transition-colors dark:text-white/70 dark:hover:text-amber-500"
+                  >
+                    <Mail size={22} strokeWidth={1.8} />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent className="-translate-x-3.5">
+                  <p>{t("home.emailTooltip")}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
-          <div className="flex space-x-4">
-            <Button variant="ghost" asChild>
-              <a
-                href="https://github.com/Luelmo14"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a
-                href="https://www.linkedin.com/in/alex-luelmo/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="mailto:alexluelmo@gmail.com">Email</a>
-            </Button>
+          <div className="font-medium text-center text-gray-600 dark:text-white/70">
+            <p>{t("footer.title")}</p>
           </div>
         </div>
       </div>
