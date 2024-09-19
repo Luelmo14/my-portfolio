@@ -56,5 +56,32 @@
         "description": "Verificación de las diferentes funcionalidades de los programas/softwares desarrollados por la empresa con el fin de completar su validación."
       }
     }
+  },
+  "certifications": {
+    "title": "Licencias y certificaciones",
+    "dateTitle": "Fecha de emisión: ",
+    "credentialButton": "Ver credencial",
+    "certificates": {
+      "dataAnalysis": {
+        "title": "Data Analysis with Python",
+        "date": "agosto de 2024"
+      },
+      "google1": {
+        "title": "Curso de introducción al desarrollo web: HTML y CSS (2/2)",
+        "date": "julio de 2024"
+      },
+      "google2": {
+        "title": "Curso de introducción al desarrollo web: HTML y CSS (1/2)",
+        "date": "junio de 2024"
+      },
+      "pcep": {
+        "title": "PCEP – Certified Entry-Level Python Programmer",
+        "date": "junio de 2024"
+      },
+      "b2": {
+        "title": "First Certificate B2",
+        "date": "enero de 2017"
+      }
+    }
   }
 }
