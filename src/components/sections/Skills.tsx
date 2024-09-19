@@ -1,27 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
+import skills from "@/constants/skills";
 
 const Skills: React.FC = () => {
   const { t } = useTranslation();
-  const skills = [
-    { name: "HTML" },
-    { name: "CSS" },
-    { name: "JavaScript" },
-    { name: "React.js" },
-    { name: "Tailwind" },
-    { name: "Node.js" },
-    { name: "Express" },
-    { name: "MongoDB" },
-    { name: "Python" },
-    { name: "SQL" },
-    { name: "Git" },
-    { name: "Figma" },
-    { name: "TypeScript" },
-    { name: "Vue.js" },
-    { name: "Docker" },
-    { name: "RESTful APIs" },
-    { name: "Firebase" },
-  ];
+
   return (
     <section id="skills" className="py-10">
       <h2 className="text-2xl font-bold mb-6">{t("skills.title")}</h2>
