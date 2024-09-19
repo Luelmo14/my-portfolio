@@ -19,5 +19,25 @@
     "title": "Sobre mi",
     "paragraph1": "Com a graduat en Tècniques d'Aplicacions de Software per la Universitat LaSalle Ramon Llull, he construït una base sòlida en el desenvolupament full-stack. Amb més d'un any a Nexiona Connectocrats, he perfeccionat les meves habilitats en serveis back-end de Python, a més del desenvolupament d'aplicacions web. La meva experiència abasta el desenvolupament de solucions back-end robustes i API RESTful, així com la creació d'interfícies d'usuari intuïtives i dissenys",
     "paragraph2": "El meu objectiu professional és sobresortir en el desenvolupament web, el desenvolupament full-stack o l'administració de bases de dades. Em motiva aplicar els meus coneixements per resoldre desafiaments tècnics i sempre busco oportunitats de creixement. Amb una sòlida formació acadèmica i experiència pràctica, incloent la meva etapa a Fujitsu Technology Solutions, estic compromès a brindar solucions de software eficients i innovadores."
+  },
+  "education": {
+    "title": "Formació Acadèmica",
+    "degrees": {
+      "lasalle": {
+        "degree": "Grau Universitari en Tècniques d'Aplicacions de Software",
+        "institution": "LaSalle Universitat Ramon Llull",
+        "location": "Barcelona, Espanya"
+      },
+      "stucom": {
+        "degree": "Grau Superior d'Administració de Sistemes Informàtics en Xarxa",
+        "institution": "Stucom Centre d'Estudis",
+        "location": "Barcelona, Espanya"
+      },
+      "thalassa": {
+        "degree": "Batxillerat Tecnològic",
+        "institution": "Institut Thalassa",
+        "location": "Montgat, Espanya"
+      }
+    }
   }
 }

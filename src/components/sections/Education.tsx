@@ -1,31 +1,37 @@
 import { University, MapPin, ExternalLink } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { useTranslation } from "react-i18next";
+
+interface EducationItem {
+  id: string;
+  dateRange: string;
+  logo: string;
+  padding: string;
+  website: string;
+  degree: string;
+  institution: string;
+  location: string;
+}
 
 const Education = () => {
-  const educationList = [
+  const { t } = useTranslation();
+  const educationData = [
     {
-      degree: "Grado Universitario en Técnicas de Aplicaciones de Software",
-      institution: "La Salle Universitat Ramon Llull",
-      location: "Barcelona",
+      id: "lasalle",
       dateRange: "2020 — 2023",
       logo: "src/assets/images/laSalle.webp",
       padding: "p-1",
       website: "https://www.salleurl.edu/",
     },
     {
-      degree:
-        "Grado Superior de Administración de Sistemas Informáticos en Red",
-      institution: "Stucom Centre d'Estudis",
-      location: "Barcelona",
+      id: "stucom",
       dateRange: "2018 — 2020",
       logo: "src/assets/images/stucom.webp",
       padding: "p-3",
       website: "https://www.stucom.com/",
     },
     {
-      degree: "Bachillerato Tecnológico",
-      institution: "Institut Thalassa",
-      location: "Montgat",
+      id: "thalassa",
       dateRange: "2016 — 2018",
       logo: "src/assets/images/thalassa.webp",
       padding: "p-0.5",
@@ -33,13 +39,21 @@ const Education = () => {
     },
   ];
 
+  const educationList = educationData.map((item) => ({
+    ...item,
+    ...(t(`education.degrees.${item.id}`, { returnObjects: true }) as Omit<
+      EducationItem,
+      keyof typeof item
+    >),
+  }));
+
   return (
     <section id="education" className="py-10">
-      <h2 className="text-2xl font-bold mb-6">Education</h2>
+      <h2 className="text-2xl font-bold mb-6">{t("education.title")}</h2>
       <div className="space-y-8">
-        {educationList.map((edu, index) => (
+        {educationList.map((edu) => (
           <div
-            key={index}
+            key={edu.id}
             className="relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4"
           >
             <header
