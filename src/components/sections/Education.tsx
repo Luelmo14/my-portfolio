@@ -13,7 +13,7 @@ interface EducationItem {
   location: string;
 }
 
-const Education = () => {
+const Education: React.FC = () => {
   const { t } = useTranslation();
   const educationData = [
     {

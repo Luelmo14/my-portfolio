@@ -21,7 +21,7 @@ interface ExperienceItem {
   website: string;
 }
 
-const Experience = () => {
+const Experience: React.FC = () => {
   const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 
-const About = () => {
+const About: React.FC = () => {
   const { t } = useTranslation();
   const paragraph1 = t("about.paragraph1");
 

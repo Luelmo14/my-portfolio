@@ -18,7 +18,7 @@ import { LanguageSelector } from "@/components/LanguageSelector";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 
-const Header = () => {
+const Header: React.FC = () => {
   const { t } = useTranslation();
   const activeSection = useScrollspy([
     "home",

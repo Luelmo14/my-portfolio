@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 
-const Skills = () => {
+const Skills: React.FC = () => {
   const skills = [
     { name: "HTML" },
     { name: "CSS" },

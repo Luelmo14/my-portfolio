@@ -128,7 +128,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
   </div>
 );
 
-const Projects = () => {
+const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-10">
       <h2 className="text-3xl font-bold mb-6">Projects</h2>

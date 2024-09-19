@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/tooltip";
 import { useTranslation } from "react-i18next";
 
-const Home = () => {
+const Home: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section id="home" className="pt-32 pb-10 relative">
