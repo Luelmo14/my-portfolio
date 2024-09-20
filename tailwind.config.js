@@ -16,6 +16,10 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        mlg: "850px",
+        ssm: "500px",
+      },
       rotate: {
         17: "17deg",
       },
