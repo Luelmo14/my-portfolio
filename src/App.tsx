@@ -14,7 +14,10 @@ function App() {
   return (
     <ThemeProvider>
       <GrainBackground />
-      <div className="min-h-screen flex flex-col font-geist">
+      <div
+        className="min-h-screen flex flex-col font-geist"
+        style={{ width: "var(--content-width, 100vw)" }}
+      >
         <Header />
         <main className="flex-grow container mx-auto px-4">
           <Home />
