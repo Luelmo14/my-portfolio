@@ -45,7 +45,7 @@ const Education: React.FC = () => {
                 href={edu.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative"
+                className="relative hidden ss:block"
               >
                 <Avatar className="group h-[4.5rem] w-[4.5rem] mr-4 border-2 bg-background/80 dark:bg-slate-100 border-borderLight dark:border-borderDark relative">
                   <AvatarImage
@@ -61,9 +61,30 @@ const Education: React.FC = () => {
                 </Avatar>
               </a>
               <div>
-                <h3 className="font-medium leading-[1.3] text-black/85 dark:text-slate-100">
-                  <div>{edu.degree}</div>
-                </h3>
+                <div className="flex items-center">
+                  <a
+                    href={edu.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative block ss:hidden"
+                  >
+                    <Avatar className="group h-[4.5rem] w-[4.5rem] mr-4 border-2 bg-background/80 dark:bg-slate-100 border-borderLight dark:border-borderDark relative">
+                      <AvatarImage
+                        src={edu.logo}
+                        alt={`${edu.institution} logo`}
+                        className={`object-contain ${edu.padding} transition-all duration-300 group-hover:blur-sm group-hover:scale-105`}
+                      />
+                      <AvatarFallback>{edu.institution[0]}</AvatarFallback>
+                      <ExternalLink
+                        className="absolute inset-0 m-auto h-6 w-6 text-black opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        strokeWidth={2}
+                      />
+                    </Avatar>
+                  </a>
+                  <h3 className="font-medium leading-[1.3] text-black/85 dark:text-slate-100">
+                    <div>{edu.degree}</div>
+                  </h3>
+                </div>
                 <div className="mt-[10px] leading-tight font-normal text-opaqueTextLight dark:text-opaqueTextDark/95">
                   <div className="flex items-center">
                     <University
