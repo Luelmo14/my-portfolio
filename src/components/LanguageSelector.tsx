@@ -6,6 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
+import { updateDocumentTitle } from "@/i18n";
 
 const languages = [
   { code: "en", name: "English" },
@@ -18,6 +19,7 @@ export function LanguageSelector() {
 
   const handleLanguageChange = (value: string) => {
     i18n.changeLanguage(value);
+    updateDocumentTitle();
   };
 
   return (
