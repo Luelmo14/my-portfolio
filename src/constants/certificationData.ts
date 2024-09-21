@@ -8,7 +8,7 @@ const certificationData = [
     logo: "src/assets/images/freeCodeCamp.webp",
     skillLogo: "src/assets/images/analysis.webp",
     translate: "translate-x-1.5 translate-y-1.5 -rotate-17",
-    size: "w-32 h-32",
+    size: "w-24 h-24 ss:w-28 ss:h-28 sm:w-32 sm:h-32",
     padding: "py-[2px]",
   },
   {
@@ -20,7 +20,7 @@ const certificationData = [
     logo: "src/assets/images/google.webp",
     skillLogo: "src/assets/images/css.webp",
     translate: "translate-x-0 translate-y-3.5 -rotate-12",
-    size: "w-[120px]",
+    size: "w-[95px] ss:w-[105px] ssm:w-[105px] sm:w-[110px]",
   },
   {
     id: "google2",
@@ -31,7 +31,7 @@ const certificationData = [
     logo: "src/assets/images/google.webp",
     skillLogo: "src/assets/images/html.webp",
     translate: "translate-x-0 translate-y-3.5 -rotate-12",
-    size: "w-[120px]",
+    size: "w-[95px] ss:w-[105px] ssm:w-[105px] sm:w-[110px]",
   },
   {
     id: "pcep",
@@ -40,16 +40,18 @@ const certificationData = [
     credentialLink: "https://verify.openedg.org/?id=k5M3.bwpf.J8Ys",
     logo: "src/assets/images/openEDG.webp",
     skillLogo: "src/assets/images/python.webp",
-    translate: "translate-x-7 translate-y-[2.1rem] -rotate-17",
-    size: "w-40 h-40",
+    translate:
+      "translate-x-6 translate-y-7 ssm:translate-x-4 ssm:translate-y-7 sm:translate-x-7 sm:translate-y-[2.1rem] -rotate-17",
+    size: "w-32 h-32 sm:w-40 sm:h-40",
   },
   {
     id: "b2",
     issuer: "Escola d'Idiomes de Montgat",
     logo: "src/assets/images/first.webp",
     skillLogo: "src/assets/images/cambridge.webp",
-    translate: "-translate-x-1 translate-y-6 -rotate-17",
-    size: "w-[100px]",
+    translate:
+      "-translate-x-1 translate-y-4 ssm:-translate-x-1 ssm:translate-y-6 -rotate-12 ss:-rotate-17",
+    size: "w-[84px] ss:w-[92px] ssm:w-[100px]",
   },
 ];
 

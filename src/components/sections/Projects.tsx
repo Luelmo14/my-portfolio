@@ -9,6 +9,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import projectsData from "@/constants/projectsData";
+import ScrollableContent from "@/components/ScrollableContent";
 
 interface Project {
   id: string;
@@ -38,9 +39,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
         </CardTitle>
       </CardHeader>
       <CardContent className="px-5 pb-4">
-        <p className="text-base font-normal text-opaqueTextLight dark:text-opaqueTextDark/95 leading-tight">
-          {project.description}
-        </p>
+        <ScrollableContent maxHeight="11rem">
+          <p className="text-base font-normal text-opaqueTextLight dark:text-opaqueTextDark/95 leading-tight mr-2">
+            {project.description}
+          </p>
+        </ScrollableContent>
       </CardContent>
       <CardFooter className="px-5 pb-4">
         <div className="flex flex-wrap gap-2">
@@ -71,9 +74,9 @@ const Projects: React.FC = () => {
   }));
 
   return (
-    <section id="projects" className="py-10">
-      <h2 className="text-3xl font-bold mb-6">{t("projects.title")}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
+    <section id="projects" className="py-6 sm:py-7 md:py-8 mlg:py-9 lg:py-10">
+      <h2 className="text-2xl font-bold mb-6">{t("projects.title")}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-7 mlg:gap-y-8 lg:gap-y-10 gap-x-6">
         {projectList.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

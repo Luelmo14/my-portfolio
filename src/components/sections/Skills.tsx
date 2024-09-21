@@ -6,9 +6,9 @@ const Skills: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="skills" className="py-10">
+    <section id="skills" className="py-6 sm:py-7 md:py-8 mlg:py-9 lg:py-10">
       <h2 className="text-2xl font-bold mb-6">{t("skills.title")}</h2>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-x-4 gap-y-3 mlg:gap-y-4">
         {skills.map((skill, index) => (
           <Badge
             key={index}

@@ -36,7 +36,10 @@ const LicensesAndCertifications: React.FC = () => {
   }));
 
   return (
-    <section id="certifications" className="py-10">
+    <section
+      id="certifications"
+      className="py-6 sm:py-7 md:py-8 mlg:py-9 lg:py-10"
+    >
       <h2 className="text-2xl font-bold mb-6">{t("certifications.title")}</h2>
       <div className="grid gap-6 lg:grid-cols-2">
         {certificationList.map((cert, index) => (
@@ -50,7 +53,7 @@ const LicensesAndCertifications: React.FC = () => {
                     <AvatarFallback>{cert.issuer[0]}</AvatarFallback>
                   )}
                 </Avatar>
-                <p className="text-base font-normal text-opaqueTextLight dark:text-opaqueTextDark/95">
+                <p className="text-right text-base font-normal text-opaqueTextLight dark:text-opaqueTextDark/95 ml-4">
                   {t("certifications.dateTitle")}{" "}
                   {t(`certifications.certificates.${cert.id}.date`)}
                 </p>
@@ -79,7 +82,11 @@ const LicensesAndCertifications: React.FC = () => {
             </CardContent>
             <CardFooter className="relative p-5 pt-0 pb-4">
               {cert.credentialLink && (
-                <Button variant="default" className="w-full mr-[27%]" asChild>
+                <Button
+                  variant="default"
+                  className="w-full mr-0 sss:mr-[27%] ss:mr-[24%] md:mr-[20%] mlg:mr-[17%] lg:mr-[27%]"
+                  asChild
+                >
                   <a
                     className="flex items-center"
                     href={cert.credentialLink}
@@ -91,7 +98,9 @@ const LicensesAndCertifications: React.FC = () => {
                 </Button>
               )}
               {cert.skillLogo && (
-                <div className={`absolute -bottom-1 -right-2 ${cert.size}`}>
+                <div
+                  className={`hidden sss:block absolute -bottom-1 -right-2 ${cert.size}`}
+                >
                   <img
                     src={cert.skillLogo}
                     alt={`Skill for ${cert.title}`}

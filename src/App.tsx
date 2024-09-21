@@ -19,7 +19,7 @@ function App() {
         style={{ width: "var(--content-width, 100vw)" }}
       >
         <Header />
-        <main className="flex-grow container mx-auto px-4">
+        <main className="flex-grow container mx-auto md:px-14 lg:px-4">
           <Home />
           <About />
           <Education />
