@@ -37,7 +37,7 @@ const ScrollableContent: React.FC<ScrollableContentProps> = ({
   return (
     <div className="relative">
       {showTopFade && (
-        <div className="absolute top-0 left-0 right-0 h-14 bg-gradient-to-b from-background dark:from-[#1F242E] to-transparent pointer-events-none z-10" />
+        <div className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-b from-background dark:from-[#1F242E] to-transparent pointer-events-none z-10" />
       )}
       <div
         ref={contentRef}
@@ -48,7 +48,7 @@ const ScrollableContent: React.FC<ScrollableContentProps> = ({
         {children}
       </div>
       {showBottomFade && (
-        <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-background dark:from-[#1F242E] to-transparent pointer-events-none z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-background dark:from-[#1F242E] to-transparent pointer-events-none z-10" />
       )}
     </div>
   );
