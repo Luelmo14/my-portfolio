@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
   }));
 
   return (
-    <section id="projects" className="py-10">
+    <section id="projects" className="py-6 sm:py-7 md:py-8 mlg:py-9 lg:py-10">
       <h2 className="text-2xl font-bold mb-6">{t("projects.title")}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-6">
         {projectList.map((project, index) => (

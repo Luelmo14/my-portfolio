@@ -40,7 +40,7 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="py-10">
+    <section id="experience" className="py-6 sm:py-7 md:py-8 mlg:py-9 lg:py-10">
       <h2 className="text-2xl font-bold mb-6">{t("experience.title")}</h2>
       <div className="space-y-8">
         {experienceList.map((exp, index) => (

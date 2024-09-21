@@ -36,7 +36,10 @@ const LicensesAndCertifications: React.FC = () => {
   }));
 
   return (
-    <section id="certifications" className="py-10">
+    <section
+      id="certifications"
+      className="py-6 sm:py-7 md:py-8 mlg:py-9 lg:py-10"
+    >
       <h2 className="text-2xl font-bold mb-6">{t("certifications.title")}</h2>
       <div className="grid gap-6 lg:grid-cols-2">
         {certificationList.map((cert, index) => (
