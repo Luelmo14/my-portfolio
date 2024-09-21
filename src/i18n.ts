@@ -18,4 +18,14 @@ i18n.use(initReactI18next).init({
   },
 });
 
+// Document title
+export function updateDocumentTitle() {
+  const portfolioText = i18n.t("common.portfolio", "Portfolio");
+  document.title = `Àlex Luelmo | ${portfolioText}`;
+}
+
+i18n.on("languageChanged", updateDocumentTitle);
+
+updateDocumentTitle();
+
 export default i18n;

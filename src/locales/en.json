@@ -152,5 +152,8 @@
   },
   "footer": {
     "title": "Developed & Designed by Àlex Luelmo"
+  },
+  "common": {
+    "portfolio": "Portfolio"
   }
 }
