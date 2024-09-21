@@ -47,8 +47,9 @@ const Footer: React.FC = () => {
               </Tooltip>
             </TooltipProvider>
           </div>
-          <div className="font-medium text-center text-gray-600 dark:text-white/70">
-            <p>{t("footer.title")}</p>
+          <div className="font-medium text-center text-gray-600 dark:text-white/70 ss:flex">
+            <p className="mr-1 mb-2">{t("footer.title")}</p>{" "}
+            <p className="mr-1 hidden ss:block">·</p> 2024
           </div>
         </div>
       </div>
