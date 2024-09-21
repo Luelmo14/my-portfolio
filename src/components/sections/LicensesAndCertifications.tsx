@@ -84,7 +84,7 @@ const LicensesAndCertifications: React.FC = () => {
               {cert.credentialLink && (
                 <Button
                   variant="default"
-                  className="w-full mr-0 sss:mr-[27%] md:mr-[20%] mlg:mr-[17%] lg:mr-[27%]"
+                  className="w-full mr-0 sss:mr-[27%] ss:mr-[24%] md:mr-[20%] mlg:mr-[17%] lg:mr-[27%]"
                   asChild
                 >
                   <a

@@ -8,7 +8,7 @@ const certificationData = [
     logo: "src/assets/images/freeCodeCamp.webp",
     skillLogo: "src/assets/images/analysis.webp",
     translate: "translate-x-1.5 translate-y-1.5 -rotate-17",
-    size: "w-24 h-24 ss:w-28 ss:h-28 ssm:w-32 ssm:h-32",
+    size: "w-24 h-24 ss:w-28 ss:h-28 sm:w-32 sm:h-32",
     padding: "py-[2px]",
   },
   {
@@ -20,7 +20,7 @@ const certificationData = [
     logo: "src/assets/images/google.webp",
     skillLogo: "src/assets/images/css.webp",
     translate: "translate-x-0 translate-y-3.5 -rotate-12",
-    size: "w-[100px] ss:w-[110px] ssm:w-[120px]",
+    size: "w-[95px] ss:w-[105px] ssm:w-[105px] sm:w-[110px]",
   },
   {
     id: "google2",
@@ -31,7 +31,7 @@ const certificationData = [
     logo: "src/assets/images/google.webp",
     skillLogo: "src/assets/images/html.webp",
     translate: "translate-x-0 translate-y-3.5 -rotate-12",
-    size: "w-[100px] ss:w-[110px] ssm:w-[120px]",
+    size: "w-[95px] ss:w-[105px] ssm:w-[105px] sm:w-[110px]",
   },
   {
     id: "pcep",
@@ -41,8 +41,8 @@ const certificationData = [
     logo: "src/assets/images/openEDG.webp",
     skillLogo: "src/assets/images/python.webp",
     translate:
-      "translate-x-6 translate-y-7 ss:translate-x-7 ss:translate-y-8 ssm:translate-x-7 ssm:translate-y-[2.1rem] -rotate-17",
-    size: "w-32 h-32 ss:w-36 ss:h-36 ssm:w-40 ssm:h-40",
+      "translate-x-6 translate-y-7 ssm:translate-x-4 ssm:translate-y-7 sm:translate-x-7 sm:translate-y-[2.1rem] -rotate-17",
+    size: "w-32 h-32 sm:w-40 sm:h-40",
   },
   {
     id: "b2",
