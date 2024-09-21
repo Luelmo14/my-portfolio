@@ -25,12 +25,12 @@ export function LanguageSelector() {
       <SelectTrigger className="border-0 shadow-none hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark">
         <Globe className="h-4 w-4" strokeWidth={1.7} />
       </SelectTrigger>
-      <SelectContent className="border border-borderLight dark:border-0 bg-background dark:bg-backgroundPrimaryDark/95 mt-2 right-10">
+      <SelectContent className="rounded-xl border border-borderLight dark:border-0 bg-background/80 backdrop-blur-sm dark:bg-backgroundPrimaryDark/90 mt-2 right-10">
         {languages.map((lang) => (
           <SelectItem
             key={lang.code}
             value={lang.code}
-            className="cursor-pointer "
+            className="cursor-pointer rounded-lg"
           >
             {lang.name}
           </SelectItem>

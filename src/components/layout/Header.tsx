@@ -56,7 +56,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-fit max-w-6xl px-4">
-      <Card className="p-2 flex items-center bg-background/80 backdrop-blur-sm border-borderLight dark:border-0 drop-shadow-md">
+      <Card className="p-2 flex items-center bg-background/80 dark:bg-backgroundPrimaryDark/90 backdrop-blur-sm border-borderLight dark:border-0 drop-shadow-md">
         <nav className="flex items-center space-x-1">
           {navItems.map((item, index) => (
             <Button
