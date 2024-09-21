@@ -67,14 +67,14 @@ const Education: React.FC = () => {
                 <div className="mt-[10px] leading-tight font-normal text-opaqueTextLight dark:text-opaqueTextDark/95">
                   <div className="flex items-center">
                     <University
-                      className="mr-[9px] -mt-[3px] h-[17px] w-[17px]"
+                      className="mr-[9px] -mt-[3px] h-[17px] w-[17px] min-w-[17px]"
                       strokeWidth={2}
                     />
                     <span>{edu.institution}</span>
                   </div>
                   <div className="flex items-center mt-1">
                     <MapPin
-                      className="mr-[9px] -mt-[2px] h-[17px] w-[17px]"
+                      className="mr-[9px] -mt-[2px] h-[17px] w-[17px] min-w-[17px]"
                       strokeWidth={2}
                     />
                     <span>{edu.location}</span>
