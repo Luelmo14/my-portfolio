@@ -1,27 +1,34 @@
+import mentecapaz from "@/assets/images/mentecapaz.webp";
+import cornflix from "@/assets/images/cornflix.webp";
+import openEventsAPI from "@/assets/images/openEventsAPI.webp";
+import openEventsVue from "@/assets/images/webProject.webp";
+import ccna from "@/assets/images/ccna3.webp";
+import portfolio from "@/assets/images/portfolio.webp";
+
 const projectsData = [
   {
     id: "mentecapaz",
-    image: "src/assets/images/mentecapaz.webp",
+    image: mentecapaz,
   },
   {
     id: "cornflix",
-    image: "src/assets/images/cornflix.webp",
+    image: cornflix,
   },
   {
     id: "openeventsAPI",
-    image: "src/assets/images/openEventsAPI.webp",
+    image: openEventsAPI,
   },
   {
     id: "openeventsVue",
-    image: "src/assets/images/webProject.webp",
+    image: openEventsVue,
   },
   {
     id: "ccna",
-    image: "src/assets/images/ccna3.webp",
+    image: ccna,
   },
   {
     id: "portfolio",
-    image: "src/assets/images/portfolio.webp",
+    image: portfolio,
   },
 ];
 
