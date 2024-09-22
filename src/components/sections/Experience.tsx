@@ -10,17 +10,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 import experienceData from "@/constants/experienceData";
-
-interface ExperienceItem {
-  id: string;
-  position: string;
-  info: string;
-  location: string;
-  description: string;
-  logo: string;
-  padding: string;
-  website: string;
-}
+import { ExperienceItem } from "@/types/experience";
 
 const Experience: React.FC = () => {
   const { t } = useTranslation();

@@ -6,12 +6,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useTranslation } from "react-i18next";
-import { TFunction } from "i18next";
+import { TooltipSectionProps } from "@/types/tooltipSectionProps";
 import meImage from "@/assets/images/me.webp";
-
-interface TooltipSectionProps {
-  t: TFunction;
-}
 
 const TooltipSection: React.FC<TooltipSectionProps> = ({ t }) => (
   <div className="flex justify-center md:justify-start mb-5">

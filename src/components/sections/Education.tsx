@@ -2,17 +2,7 @@ import { University, MapPin, ExternalLink } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useTranslation } from "react-i18next";
 import educationData from "@/constants/educationData";
-
-interface EducationItem {
-  id: string;
-  dateRange: string;
-  logo: string;
-  padding: string;
-  website: string;
-  degree: string;
-  institution: string;
-  location: string;
-}
+import { EducationItem } from "@/types/education";
 
 const Education: React.FC = () => {
   const { t } = useTranslation();
