@@ -10,15 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import projectsData from "@/constants/projectsData";
 import ScrollableContent from "@/modules/scrollable-content/ScrollableContent";
-
-interface Project {
-  id: string;
-  title: string;
-  type: string;
-  description: string;
-  tags: string[];
-  image: string;
-}
+import { Project } from "@/types/project";
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
   <div className="relative">

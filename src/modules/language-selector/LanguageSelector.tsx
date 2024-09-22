@@ -7,12 +7,7 @@ import {
   SelectTrigger,
 } from "@/components/ui/select";
 import { updateDocumentTitle } from "@/i18n";
-
-const languages = [
-  { code: "en", name: "English" },
-  { code: "es", name: "Español" },
-  { code: "ca", name: "Català" },
-];
+import languages from "@/constants/languagesData";
 
 export function LanguageSelector() {
   const { i18n } = useTranslation();
