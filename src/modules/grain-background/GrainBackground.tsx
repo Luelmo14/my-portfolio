@@ -1,45 +1,44 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import { Gradient, applyGrain } from "@prodbyeagle/grainient";
 import { useTheme } from "@/contexts/ThemeContext";
 
-const GrainBackground: React.FC = () => {
+const GrainBackground: React.FC = React.memo(() => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const { theme } = useTheme();
 
-  useEffect(() => {
+  const renderBackground = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const renderBackground = () => {
-      // Set canvas size
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    // Set canvas size
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-      if (theme === "light") {
-        // Light theme
-        Gradient(canvas, {
-          colors: ["#F5E6D3", "#FAF3E8"],
-          type: "linear",
-          angle: 50,
-        });
-        applyGrain(ctx, canvas.width, canvas.height, 30);
-      } else {
-        // Dark theme
-        Gradient(canvas, {
-          colors: ["#1e2632", "#171D26", "#171926"],
-          type: "linear",
-          angle: 55,
-        });
-        applyGrain(ctx, canvas.width, canvas.height, 5);
-      }
-    };
+    if (theme === "light") {
+      // Light theme
+      Gradient(canvas, {
+        colors: ["#F5E6D3", "#FAF3E8"],
+        type: "linear",
+        angle: 50,
+      });
+      applyGrain(ctx, canvas.width, canvas.height, 30);
+    } else {
+      // Dark theme
+      Gradient(canvas, {
+        colors: ["#1e2632", "#171D26", "#171926"],
+        type: "linear",
+        angle: 55,
+      });
+      applyGrain(ctx, canvas.width, canvas.height, 5);
+    }
+  }, [theme]);
 
+  useEffect(() => {
     renderBackground();
 
-    // Resize handler
     const handleResize = () => {
       renderBackground();
     };
@@ -49,7 +48,7 @@ const GrainBackground: React.FC = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [theme]); // Re-run effect when theme changes
+  }, [renderBackground]);
 
   return (
     <canvas
@@ -64,6 +63,8 @@ const GrainBackground: React.FC = () => {
       }}
     />
   );
-};
+});
+
+GrainBackground.displayName = "GrainBackground";
 
 export default GrainBackground;
