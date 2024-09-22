@@ -28,7 +28,7 @@ const Footer = React.memo(() => {
                     <Linkedin size={22} strokeWidth={1.8} />
                   </a>
                 </TooltipTrigger>
-                <TooltipContent className="-translate-x-3.5">
+                <TooltipContent className="mr-12">
                   <p>{t("home.linkedinTooltip")}</p>
                 </TooltipContent>
               </Tooltip>
@@ -41,7 +41,7 @@ const Footer = React.memo(() => {
                     <Mail size={22} strokeWidth={1.8} />
                   </a>
                 </TooltipTrigger>
-                <TooltipContent className="-translate-x-3.5">
+                <TooltipContent className="mr-12">
                   <p>{t("home.emailTooltip")}</p>
                 </TooltipContent>
               </Tooltip>

@@ -15,26 +15,28 @@ const TooltipSection: React.FC<TooltipSectionProps> = ({ t }) => (
       <Tooltip>
         <TooltipTrigger className="mr-8" asChild>
           <a
-            href="#"
+            href="mailto:alexluelmo@gmail.com"
             className="text-gray-600 hover:text-amber-500 transition-colors dark:text-white/70 dark:hover:text-amber-500"
           >
             <Mail size={24} />
           </a>
         </TooltipTrigger>
-        <TooltipContent className="md:left-1/2 md:transform md:-translate-x-1/2">
+        <TooltipContent>
           <p>{t("home.emailTooltip")}</p>
         </TooltipContent>
       </Tooltip>
       <Tooltip>
         <TooltipTrigger asChild>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/alex-luelmo/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-600 hover:text-amber-500 transition-colors dark:text-white/70 dark:hover:text-amber-500"
           >
             <Linkedin size={24} />
           </a>
         </TooltipTrigger>
-        <TooltipContent className="md:left-1/2 md:transform md:-translate-x-1/2">
+        <TooltipContent>
           <p>{t("home.linkedinTooltip")}</p>
         </TooltipContent>
       </Tooltip>
