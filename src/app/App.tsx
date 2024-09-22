@@ -4,6 +4,7 @@ import Header from "../components/layout/Header";
 import Home from "../components/sections/Home";
 import Footer from "../components/layout/Footer";
 import GrainBackground from "../modules/grain-background/GrainBackground";
+import LoadingSpinner from "../modules/loading-spinner/LoadingSpinner";
 
 const About = lazy(() => import("../components/sections/About"));
 const Education = lazy(() => import("../components/sections/Education"));
@@ -17,25 +18,25 @@ const LicensesAndCertifications = lazy(
 function App() {
   return (
     <ThemeProvider>
-      <GrainBackground />
-      <div
-        className="min-h-screen flex flex-col font-geist"
-        style={{ width: "var(--content-width, 100vw)" }}
-      >
-        <Header />
-        <main className="flex-grow container mx-auto md:px-14 lg:px-4">
-          <Home />
-          <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
+        <GrainBackground />
+        <div
+          className="min-h-screen flex flex-col font-geist"
+          style={{ width: "var(--content-width, 100vw)" }}
+        >
+          <Header />
+          <main className="flex-grow container mx-auto md:px-14 lg:px-4">
+            <Home />
             <About />
             <Education />
             <Experience />
             <LicensesAndCertifications />
             <Skills />
             <Projects />
-          </Suspense>
-        </main>
-        <Footer />
-      </div>
+          </main>
+          <Footer />
+        </div>
+      </Suspense>
     </ThemeProvider>
   );
 }
