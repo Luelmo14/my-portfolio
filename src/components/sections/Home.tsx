@@ -73,7 +73,7 @@ const Home: React.FC = () => {
           <img
             src={meImage}
             alt="Àlex Luelmo"
-            className="w-52 sm:w-56 md:w-56 mlg:w-80 lg:w-96 rounded-full z-10 relative"
+            className="h-full w-52 sm:w-56 md:w-56 mlg:w-80 lg:w-96 rounded-full z-10 relative"
           />
           <div className="absolute top-[0px] right-[0px] w-6 h-6 ssm:w-8 ssm:h-8 mlg:w-11 mlg:h-11 bg-accentPrimary rounded-full z-0"></div>
           <div className="absolute right-[200px] top-[85px] ssm:right-[250px] mlg:right-[285px] ssm:top-[100px] lg:top-[160px] lg:right-[345px] w-5 h-5 ssm:w-7 ssm:h-7 mlg:w-9 mlg:h-9 bg-accentSecondary rounded-full z-0"></div>
