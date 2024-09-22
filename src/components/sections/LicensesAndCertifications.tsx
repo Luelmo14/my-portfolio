@@ -63,7 +63,7 @@ const LicensesAndCertifications: React.FC = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="p-5 pb-5 pt-0">
-              <h3 className="text-lg font-semibold mb-3.5 leading-tight">
+              <h3 className="text-lg font-semibold mb-3.5 leading-tight mr-0 md:mr-6">
                 {cert.title}
               </h3>
               {cert.credentialId && (

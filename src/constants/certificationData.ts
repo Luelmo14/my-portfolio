@@ -51,7 +51,7 @@ const certificationData = [
     logo: openEDG,
     skillLogo: python,
     translate:
-      "translate-x-6 translate-y-7 ssm:translate-x-4 ssm:translate-y-7 sm:translate-x-7 sm:translate-y-[2.1rem] -rotate-17",
+      "translate-x-6 translate-y-7 ssm:translate-x-4 ssm:translate-y-7 sm:translate-x-7 sm:translate-y-8 -rotate-17",
     size: "w-32 h-32 sm:w-40 sm:h-40",
   },
   {
