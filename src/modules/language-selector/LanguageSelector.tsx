@@ -28,6 +28,7 @@ export function LanguageSelector() {
             key={lang.code}
             value={lang.code}
             className="cursor-pointer rounded-lg"
+            aria-label={lang.name}
           >
             {lang.name}
           </SelectItem>
