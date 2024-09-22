@@ -8,7 +8,6 @@ import {
 import { useTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 import meImage from "@/assets/images/me.webp";
-import LazyImage from "@/components/LazyImage";
 
 interface TooltipSectionProps {
   t: TFunction;
@@ -71,7 +70,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="md:translate-y-44 md:translate-x-52 mlg:translate-y-0 mlg:translate-x-0 mlg:ml-auto relative">
-          <LazyImage
+          <img
             src={meImage}
             alt="Àlex Luelmo"
             className="w-52 sm:w-56 md:w-56 mlg:w-80 lg:w-96 rounded-full z-10 relative"
