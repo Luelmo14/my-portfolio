@@ -8,7 +8,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-const Footer: React.FC = () => {
+const Footer = React.memo(() => {
   const { t } = useTranslation();
 
   return (
@@ -55,6 +55,6 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;
