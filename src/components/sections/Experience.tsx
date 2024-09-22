@@ -71,6 +71,7 @@ const Experience: React.FC = () => {
                       src={exp.logo}
                       alt={`${exp.company} logo`}
                       className={`object-contain ${exp.padding} transition-all duration-300 group-hover/avatar:blur-sm group-hover/avatar:scale-105`}
+                      loading="lazy"
                     />
                     <AvatarFallback>{exp.company[0]}</AvatarFallback>
                     <ExternalLink
@@ -93,6 +94,7 @@ const Experience: React.FC = () => {
                           src={exp.logo}
                           alt={`${exp.company} logo`}
                           className={`object-contain ${exp.padding} transition-all duration-300 group-hover/avatar:blur-sm group-hover/avatar:scale-105`}
+                          loading="lazy"
                         />
                         <AvatarFallback>{exp.company[0]}</AvatarFallback>
                         <ExternalLink

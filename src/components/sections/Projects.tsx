@@ -27,6 +27,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
         src={project.image}
         alt={project.title}
         className="h-full w-full object-cover rounded-xl border border-borderLight dark:border-0 shadow-md dark:shadow-lg"
+        loading="lazy"
       />
     </div>
     <Card className="overflow-hidden bg-[#F8F3EB] dark:bg-[#1F242E] relative z-20">

@@ -105,6 +105,7 @@ const LicensesAndCertifications: React.FC = () => {
                     src={cert.skillLogo}
                     alt={`Skill for ${cert.title}`}
                     className={`w-full h-full transform ${cert.translate}`}
+                    loading="lazy"
                   />
                 </div>
               )}
