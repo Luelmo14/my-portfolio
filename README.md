@@ -6,8 +6,8 @@
 
 This is my personal portfolio website, showcasing my skills and projects. Built with React, Vite, and shadcn/ui, it features a clean and responsive design.
 
+> 🔗 Project Link: [Portfolio](https://luelmo14.github.io/my-portfolio/)
+
 ## Contact
 
-[Àlex Luelmo] - [alexluelmo@gmail.com]
-
-Project Link: [Not yet deployed]
+✉️ Email: [alexluelmo@gmail.com]
