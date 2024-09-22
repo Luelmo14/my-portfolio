@@ -2,7 +2,7 @@ import { StrictMode, useEffect, lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { setScrollbarWidth } from "@/utils/scrollbarWidth";
 
-const App = lazy(() => import("./App.tsx"));
+const App = lazy(() => import("./app/App.tsx"));
 
 function Root() {
   useEffect(() => {
