@@ -1,10 +1,12 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+} from "react";
 import { Theme } from "@/types/theme";
-
-type ThemeContextType = {
-  theme: Theme;
-  toggleTheme: () => void;
-};
+import { ThemeContextType } from "@/types/theme";
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
@@ -24,12 +26,16 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
+  }, []);
+
+  const contextValue = React.useMemo(() => {
+    return { theme, toggleTheme };
+  }, [theme, toggleTheme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={contextValue}>
       {children}
     </ThemeContext.Provider>
   );
