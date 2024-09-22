@@ -13,8 +13,8 @@ import {
   Linkedin,
   Award,
 } from "lucide-react";
-import ThemeToggle from "@/components/ThemeToggle";
-import { LanguageSelector } from "@/components/LanguageSelector";
+import ThemeToggle from "@/modules/theme-toggle/ThemeToggle";
+import { LanguageSelector } from "@/modules/language-selector/LanguageSelector";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 

@@ -3,7 +3,7 @@ import { ThemeProvider } from "../contexts/ThemeContext";
 import Header from "../components/layout/Header";
 import Home from "../components/sections/Home";
 import Footer from "../components/layout/Footer";
-import GrainBackground from "../components/GrainBackground";
+import GrainBackground from "../modules/grain-background/GrainBackground";
 
 const About = lazy(() => import("../components/sections/About"));
 const Education = lazy(() => import("../components/sections/Education"));

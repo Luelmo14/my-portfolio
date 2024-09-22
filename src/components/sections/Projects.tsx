@@ -9,7 +9,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import projectsData from "@/constants/projectsData";
-import ScrollableContent from "@/components/ScrollableContent";
+import ScrollableContent from "@/modules/scrollable-content/ScrollableContent";
 
 interface Project {
   id: string;
