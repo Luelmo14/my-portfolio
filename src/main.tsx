@@ -1,10 +1,8 @@
-import { StrictMode, useEffect } from "react";
+import { StrictMode, useEffect, lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import "./styles/index.css";
-import "unfonts.css";
-import "./i18n";
 import { setScrollbarWidth } from "@/utils/scrollbarWidth";
+
+const App = lazy(() => import("./App.tsx"));
 
 function Root() {
   useEffect(() => {
@@ -15,7 +13,9 @@ function Root() {
 
   return (
     <StrictMode>
-      <App />
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
     </StrictMode>
   );
 }

@@ -1,8 +1,9 @@
+import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import skills from "@/constants/skills";
 
-const Skills: React.FC = () => {
+const Skills = React.memo(() => {
   const { t } = useTranslation();
 
   return (
@@ -21,6 +22,6 @@ const Skills: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Skills;

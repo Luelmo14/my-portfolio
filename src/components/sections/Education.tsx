@@ -52,6 +52,7 @@ const Education: React.FC = () => {
                     src={edu.logo}
                     alt={`${edu.institution} logo`}
                     className={`object-contain ${edu.padding} transition-all duration-300 group-hover:blur-sm group-hover:scale-105`}
+                    loading="lazy"
                   />
                   <AvatarFallback>{edu.institution[0]}</AvatarFallback>
                   <ExternalLink
@@ -73,6 +74,7 @@ const Education: React.FC = () => {
                         src={edu.logo}
                         alt={`${edu.institution} logo`}
                         className={`object-contain ${edu.padding} transition-all duration-300 group-hover:blur-sm group-hover:scale-105`}
+                        loading="lazy"
                       />
                       <AvatarFallback>{edu.institution[0]}</AvatarFallback>
                       <ExternalLink
