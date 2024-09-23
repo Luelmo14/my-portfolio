@@ -25,3 +25,6 @@ dist-ssr
 
 # repopack
 repopack-output.txt
+
+# markdown notes
+update-gh-pages.md
