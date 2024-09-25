@@ -53,7 +53,7 @@
         "position": "Técnico, Validación de Software (Prácticas)",
         "info": "Compañía global japonesa en el sector de las TIC.",
         "location": "Barcelona, España",
-        "description": "Verificación de las diferentes funcionalidades de los programas/softwares desarrollados por la empresa con el fin de completar su validación."
+        "description": "Verificación de las diferentes funcionalidades de los programas/software desarrollados por la empresa con el fin de completar su validación."
       }
     }
   },
@@ -151,7 +151,7 @@
     }
   },
   "footer": {
-    "title": "Desarrollado y Diseñado por Àlex Luelmo"
+    "title": "Desarrollado & Diseñado por Àlex Luelmo"
   },
   "common": {
     "portfolio": "Portafolio"

@@ -18,8 +18,7 @@ const About: React.FC = () => {
           {isCatalanOrSpanish ? (
             <>
               {paragraph1.split(" responsive")[0]}
-              <em> responsive</em>
-              {paragraph1.split(" responsive")[1]}
+              <em> responsive</em>.{paragraph1.split(" responsive")[1]}
             </>
           ) : (
             paragraph1
