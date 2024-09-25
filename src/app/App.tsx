@@ -21,7 +21,7 @@ function App() {
       <Suspense fallback={<LoadingSpinner />}>
         <GrainBackground />
         <div
-          className="min-h-screen flex flex-col font-geist"
+          className="min-h-screen flex flex-col font-geist antialiased selection:bg-amber-300 selection:text-amber-900"
           style={{ width: "var(--content-width, 100vw)" }}
         >
           <Header />
