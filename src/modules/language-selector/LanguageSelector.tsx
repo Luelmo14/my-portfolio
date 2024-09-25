@@ -7,20 +7,18 @@ import {
   SelectTrigger,
 } from "@/components/ui/select";
 import languages from "@/constants/languagesData";
-import { useLocation } from "react-router-dom";
+import { useLanguageRoute } from "@/hooks/useLanguageRoute";
 
 export function LanguageSelector() {
   const { i18n } = useTranslation();
-  const location = useLocation();
+  const { changeLanguage } = useLanguageRoute();
 
   const currentLang = i18n.language;
 
   return (
     <Select
       onValueChange={(value) => {
-        const newPath = `/my-portfolio/${value}${location.pathname.substring("/my-portfolio".length + 3)}`;
-        window.history.pushState({}, "", newPath);
-        i18n.changeLanguage(value);
+        changeLanguage(value);
       }}
       defaultValue={currentLang}
     >
