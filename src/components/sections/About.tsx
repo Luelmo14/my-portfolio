@@ -1,14 +1,18 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
+import { useLanguageKey } from "@/hooks/useLanguageKey";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
-  const paragraph1 = t("about.paragraph1");
+  const key = useLanguageKey();
 
   const isCatalanOrSpanish = i18n.language === "ca" || i18n.language === "es";
+  const paragraph1 = t("about.paragraph1");
 
   return (
     <section
+      key={key}
       id="about"
       className="pb-6 pt-0 md:pb-8 md:pt-4 mlg:pb-9 mlg:pt-6 lg:pb-10 lg:pt-7"
     >
