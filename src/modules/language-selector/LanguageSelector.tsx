@@ -6,19 +6,24 @@ import {
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
-import { updateDocumentTitle } from "@/i18n";
 import languages from "@/constants/languagesData";
+import { useLocation } from "react-router-dom";
 
 export function LanguageSelector() {
   const { i18n } = useTranslation();
+  const location = useLocation();
 
-  const handleLanguageChange = (value: string) => {
-    i18n.changeLanguage(value);
-    updateDocumentTitle();
-  };
+  const currentLang = i18n.language;
 
   return (
-    <Select onValueChange={handleLanguageChange} defaultValue={i18n.language}>
+    <Select
+      onValueChange={(value) => {
+        const newPath = `/my-portfolio/${value}${location.pathname.substring("/my-portfolio".length + 3)}`;
+        window.history.pushState({}, "", newPath);
+        i18n.changeLanguage(value);
+      }}
+      defaultValue={currentLang}
+    >
       <SelectTrigger className="border-0 shadow-none hover:bg-hoverBackgroundLight/60 dark:hover:bg-hoverBackgroundDark">
         <Globe className="h-4 w-4" strokeWidth={1.7} />
       </SelectTrigger>
