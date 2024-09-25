@@ -13,7 +13,7 @@
     "linkedinTooltip": "Perfil de LinkedIn",
     "greeting": "Hola,",
     "name": "Sóc l'Àlex Luelmo.",
-    "intro": "Desenvolupador full-stack graduat de laSalle amb més d'un any d'experiència. Apassionat pel desenvolupament web, els serveis back-end i la creació de solucions innovadores. Buscant oportunitats per aplicar i desenvolupar les meves habilitats."
+    "intro": "Desenvolupador full-stack graduat de LaSalle amb més d'un any d'experiència. Apassionat pel desenvolupament web, els serveis back-end i la creació de solucions innovadores. Buscant oportunitats per aplicar i desenvolupar les meves habilitats."
   },
   "about": {
     "title": "Sobre mi",
@@ -50,10 +50,10 @@
         "description": "Desenvolupament i manteniment d'aplicacions web. Desenvolupament back-end amb Python. Implementació de noves funcionalitats i optimització del codi existent. Col·laboració en el disseny i desenvolupament de APIs REST. Resolució d'incidències i suport tècnic."
       },
       "fujitsu": {
-        "position": "Tècnic, Validació de Software (Practiques)",
+        "position": "Tècnic, Validació de Software (Pràctiques)",
         "info": "Empresa japonesa en el sector de TIC.",
         "location": "Barcelona, Espanya",
-        "description": "Verificació de les diferents funcionalitats dels programes/programari desenvolupats per la empresa per completar la seva validació."
+        "description": "Verificació de les diferents funcionalitats dels programes/software desenvolupats per l'empresa per completar la seva validació."
       }
     }
   },
@@ -119,7 +119,7 @@
       "openeventsVue": {
         "title": "OpenEvents · Projecte Vue.js",
         "type": "Projecte destacat",
-        "description": "Desenvolupament duna pàgina web des de zero utilitzant HTML, CSS i Vue.js. El projecte incloïa la implementació de disseny responsive i integració amb l'API d'OpenEvents. Funcionalitats clau: gestió d'usuaris, esdeveniments i relacions entre ells. El desenvolupament va implicar organització del codi en vistes i components, maneig de rutes i realització de peticions a l'API.",
+        "description": "Desenvolupament d'una pàgina web des de zero utilitzant HTML, CSS i Vue.js. El projecte incloïa la implementació de disseny responsive i integració amb l'API d'OpenEvents. Funcionalitats clau: gestió d'usuaris, esdeveniments i relacions entre ells. El desenvolupament va implicar organització del codi en vistes i components, maneig de rutes i realització de peticions a l'API.",
         "tags": ["Vue.js", "HTML", "CSS", "API", "Disseny Responsive"]
       },
       "ccna": {
