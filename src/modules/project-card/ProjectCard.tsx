@@ -74,10 +74,13 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                       <img
                         src={github}
                         alt="Github"
-                        className="w-[17px] h-[17px] invert"
+                        className="w-[17px] h-[17px] invert dark:invert-0"
                       />
                     </Button>
                   </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{t("projects.projectsData.portfolio.viewGithub")}</p>
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             )}
