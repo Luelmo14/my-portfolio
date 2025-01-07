@@ -9,6 +9,7 @@ const projectsData = [
   {
     id: "mentecapaz",
     image: mentecapaz,
+    hasThesis: true,
   },
   {
     id: "cornflix",

@@ -5,4 +5,5 @@ export interface Project {
   description: string;
   tags: string[];
   image: string;
+  hasThesis?: boolean;
 }
