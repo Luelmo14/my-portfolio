@@ -9,6 +9,7 @@ const projectsData = [
   {
     id: "mentecapaz",
     image: mentecapaz,
+    hasThesis: true,
   },
   {
     id: "cornflix",
@@ -29,6 +30,7 @@ const projectsData = [
   {
     id: "portfolio",
     image: portfolio,
+    hasGithub: true,
   },
 ];
 
