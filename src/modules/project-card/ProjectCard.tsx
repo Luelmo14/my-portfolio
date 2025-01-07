@@ -18,6 +18,7 @@ import { Project } from "@/types/project";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import github from "../../../assets/images/github.svg";
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const { t } = useTranslation();
@@ -34,7 +35,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       </div>
       <Card className="overflow-hidden bg-[#F8F3EB] dark:bg-[#1F242E] relative z-20">
         <CardHeader className="space-y-0.5 py-4 px-5">
-          <div className="flex justify-between ">
+          <div className="flex justify-between">
             <div>
               <CardTitle className="text-sm font-medium text-opaqueTextLight/75 dark:text-opaqueTextDark/80 tracking-wider">
                 {project.type}
@@ -58,6 +59,25 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                   <TooltipContent>
                     <p>{t("projects.projectsData.mentecapaz.viewThesis")}</p>
                   </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
+            {project.hasGithub && (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant="default"
+                      className="w-fit ml-4 px-3"
+                      onClick={handleGithubClick}
+                    >
+                      <img
+                        src={github}
+                        alt="Github"
+                        className="w-[17px] h-[17px] invert"
+                      />
+                    </Button>
+                  </TooltipTrigger>
                 </Tooltip>
               </TooltipProvider>
             )}
@@ -91,6 +111,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 const handleThesisClick = (e: React.MouseEvent) => {
   e.preventDefault();
   window.open(`${import.meta.env.BASE_URL}thesis.pdf`, "_blank");
+};
+
+const handleGithubClick = (e: React.MouseEvent) => {
+  e.preventDefault();
+  window.open("https://github.com/Luelmo14/my-portfolio", "_blank");
 };
 
 export default ProjectCard;

@@ -30,6 +30,7 @@ const projectsData = [
   {
     id: "portfolio",
     image: portfolio,
+    hasGithub: true,
   },
 ];
 
