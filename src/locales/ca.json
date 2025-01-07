@@ -147,7 +147,8 @@
           "shadcn/ui",
           "Tailwind CSS",
           "Disseny Responsive"
-        ]
+        ],
+        "viewGithub": "Veure codi font"
       }
     }
   },

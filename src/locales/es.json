@@ -147,7 +147,8 @@
           "shadcn/ui",
           "Tailwind CSS",
           "Diseño Responsive"
-        ]
+        ],
+        "viewGithub": "Ver código fuente"
       }
     }
   },
